@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+<XPD:SUBUNITS>
+</XPD:SUBUNITS>
+<XPD:PROFILES>
+<XPD:PROFILE>UMLStandard</XPD:PROFILE>
+</XPD:PROFILES>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLProject" guid="ujyabdp6ykmox2Dz4rVvUgAA">
+<XPD:ATTR name="Title" type="string">Untitled</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">5</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="4MvHk6ObbUmBKtecqKUUcwAA">
+<XPD:ATTR name="Name" type="string">Use Case Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">useCaseModel</XPD:ATTR>
+<XPD:REF name="Namespace">ujyabdp6ykmox2Dz4rVvUgAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLUseCaseDiagram" guid="K2w1F1tNekKM38l5eY07CgAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">4MvHk6ObbUmBKtecqKUUcwAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLUseCaseDiagramView" guid="F6Z5U0dmVUuKtclGjzQMGwAA">
+<XPD:REF name="Diagram">K2w1F1tNekKM38l5eY07CgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="kfe47nsjhkeW68rdm0O++AAA">
+<XPD:ATTR name="Name" type="string">Analysis Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">analysisModel</XPD:ATTR>
+<XPD:REF name="Namespace">ujyabdp6ykmox2Dz4rVvUgAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="m/Pb0yXhKkaIM7+xbZr4UwAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
+<XPD:ATTR name="DiagramType" type="string">RobustnessDiagram</XPD:ATTR>
+<XPD:REF name="DiagramOwner">kfe47nsjhkeW68rdm0O++AAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="1wROGpV5Y02kVhC5V4jJKgAA">
+<XPD:REF name="Diagram">m/Pb0yXhKkaIM7+xbZr4UwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[2]" type="UMLModel" guid="rFg8jbWQxkqNIUhybVZQjwAA">
+<XPD:ATTR name="Name" type="string">Design Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">designModel</XPD:ATTR>
+<XPD:REF name="Namespace">ujyabdp6ykmox2Dz4rVvUgAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="3r20RfeivkmYCKNFKGJvFgAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
+<XPD:REF name="DiagramOwner">rFg8jbWQxkqNIUhybVZQjwAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="gwRf8cN+bE2BtXG800FbcwAA">
+<XPD:REF name="Diagram">3r20RfeivkmYCKNFKGJvFgAA</XPD:REF>
+<XPD:ATTR name="#OwnedViews" type="integer">16</XPD:ATTR>
+<XPD:OBJ name="OwnedViews[0]" type="EllipseView" guid="PVwvofLl0kqlsbPaqEv/+QAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">128</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">168</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">180</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">84</XPD:ATTR>
+<XPD:ATTR name="LineWidth" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="LineKind" type="LineKind">lkSolid</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[1]" type="UMLTextView" guid="hBuFlSTxEU2ATjWnqBpbMAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">196</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">200</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">34</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">23</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">原则
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[2]" type="UMLNoteView" guid="A+Tw94x5Y024QofbSVBmKgAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">360</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">350</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">98</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">迪米特法则
+1、如果两个类不必彼此直接通信，那么这两个类就不应当
+发生直接的相互作用。如果其中一个类需要调用另一个
+类的某一个方法的话，可以通过第三者转发这个调用。
+2、在类的设计上，每一个类都应当尽量降低成员的访问权限。
+3、根本思想是强调了类之间的松耦合。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[3]" type="UMLNoteLinkView" guid="zjd9k4X/YkuQk/W6lddQvAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">298,168;438,97</XPD:ATTR>
+<XPD:REF name="Head">A+Tw94x5Y024QofbSVBmKgAA</XPD:REF>
+<XPD:REF name="Tail">PVwvofLl0kqlsbPaqEv/+QAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[4]" type="UMLNoteView" guid="nGhMYaaFtUulbRMvDCLupwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">364</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">116</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">386</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">158</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">单一职责原则
+1、就一个类而言，应该仅有一个引起它变化的原因。
+2、如果一个类承担的职责过多，就等于把这些职责耦合在一起，
+一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力。
+这种耦合会导致脆弱的设计，当变化发生时，设计会遭受到意想
+不到的破坏。
+3、软件设计真正要做的许多内容，就是发现职责并把那些职责相互
+分离。
+4、如果你能够想到多于一个的动机去改变一个类，那么这个类就具有
+多于一个的职责。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[5]" type="UMLNoteLinkView" guid="ljdjoaFJIEmF2/sdOtcKDwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">364,202;307,205</XPD:ATTR>
+<XPD:REF name="Head">PVwvofLl0kqlsbPaqEv/+QAA</XPD:REF>
+<XPD:REF name="Tail">nGhMYaaFtUulbRMvDCLupwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[6]" type="UMLNoteView" guid="FT9Aja0v+0ekD/doFAiUZAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">364</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">292</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">422</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">158</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">开放封闭原则
+1、软件实体（类、模块、函数等等）应该可以扩展，但是不可修改。
+2、无论模块是多么的‘封闭’，都会存在一些无法对之封闭的变化。既然
+不可能完全封闭，设计人员必须对于他设计的模块应该对哪种变化封闭
+作出选择。他必须猜测出最有可能发生变化的种类，然后构造抽象来隔离
+那些变化。
+3、在我们最初编写代码时，假设变化不会发生，当变化发生时，我们就
+创建抽象来隔离以后发生的同类变化。
+4、对于应用程序中的每个部分都刻意地进行抽象同样不是一个好主意。拒绝
+不成熟的抽象和抽象本身一样重要。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[7]" type="UMLNoteLinkView" guid="FpLmNQTKmUCSxUFO+yA5lAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">401,292;307,250</XPD:ATTR>
+<XPD:REF name="Head">PVwvofLl0kqlsbPaqEv/+QAA</XPD:REF>
+<XPD:REF name="Tail">FT9Aja0v+0ekD/doFAiUZAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[8]" type="UMLNoteView" guid="1Mv1kGzqkU26nwhapsR17wAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">364</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">456</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">326</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">53</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">依赖倒转原则
+1、高层模块不应该依赖底层模块，两个都应该依赖抽象。
+2、抽象不应该依赖细节，细节应该依赖抽象。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[9]" type="UMLNoteView" guid="VCjTUxkbJEOrfwsNWU3fCAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">364</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">516</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">242</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">38</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">里氏代换原则
+1、子类型必须能够替换掉他们的父类型。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[10]" type="UMLNoteView" guid="R1GuifSBXkKt1hyabQZPLAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">864</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">324</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">232</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">368</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">&lt;?php
+class A {
+        public function fa() {
+                echo 'fa';
+        }
+}
+
+class B extends A {
+        public function fb() {
+                echo 'fb';
+        }
+}
+
+class C {
+        public static function fc(A $a) {
+                //A中没有fb方法这里也没错，
+                //但最好还是只调用父类中的
+                //方法较好，这样逻辑更加清晰
+                $a-&gt;fb();
+        }
+}
+
+C::fc(new B());
+?&gt;
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[11]" type="UMLNoteLinkView" guid="fwCgSmltg0K6ecmmyamHKAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">497,456;265,251</XPD:ATTR>
+<XPD:REF name="Head">PVwvofLl0kqlsbPaqEv/+QAA</XPD:REF>
+<XPD:REF name="Tail">1Mv1kGzqkU26nwhapsR17wAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[12]" type="UMLNoteLinkView" guid="yxw6fVJHikK4JPqLwIAqzQAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">469,516;251,251</XPD:ATTR>
+<XPD:REF name="Head">PVwvofLl0kqlsbPaqEv/+QAA</XPD:REF>
+<XPD:REF name="Tail">VCjTUxkbJEOrfwsNWU3fCAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[13]" type="UMLNoteLinkView" guid="hIdpAfmPcEibs4DIlyA/1AAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">864,513;605,527</XPD:ATTR>
+<XPD:REF name="Head">VCjTUxkbJEOrfwsNWU3fCAAA</XPD:REF>
+<XPD:REF name="Tail">R1GuifSBXkKt1hyabQZPLAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[14]" type="UMLNoteView" guid="L1mGL+MOmk+AMnNMCyPd8gAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">364</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">572</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">456</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">68</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">组合/聚合复用原则
+尽量使用组合/聚合，尽量不要使用类继承。
+优先使用对象的组合/聚合将有助于你保持每个类被封装，并被集中在单个任务上。
+这样类和类继承层次会保持较小规模，并且不太可能增长为不可控制的庞然大物。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[15]" type="UMLNoteLinkView" guid="Mwq5lDgBp0e2J8NvJp1lhAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">257,251;560,572</XPD:ATTR>
+<XPD:REF name="Head">L1mGL+MOmk+AMnNMCyPd8gAA</XPD:REF>
+<XPD:REF name="Tail">PVwvofLl0kqlsbPaqEv/+QAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="+mGn2pR+ckiC5l36bO08bgAA">
+<XPD:ATTR name="Name" type="string">Implementation Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">implementationModel</XPD:ATTR>
+<XPD:REF name="Namespace">ujyabdp6ykmox2Dz4rVvUgAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="W9pb8C/khEm3fUufH4ZyWAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">+mGn2pR+ckiC5l36bO08bgAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="291ONOVC70WCeQ4SYATSowAA">
+<XPD:REF name="Diagram">W9pb8C/khEm3fUufH4ZyWAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[4]" type="UMLModel" guid="mp2FK0UwcUOMbuoX02R7PQAA">
+<XPD:ATTR name="Name" type="string">Deployment Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">deploymentModel</XPD:ATTR>
+<XPD:REF name="Namespace">ujyabdp6ykmox2Dz4rVvUgAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLDeploymentDiagram" guid="M+0/wzPEl0aEfOI13qLVewAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">mp2FK0UwcUOMbuoX02R7PQAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLDeploymentDiagramView" guid="3hufm1Dcl0ifTz51clW8FwAA">
+<XPD:REF name="Diagram">M+0/wzPEl0aEfOI13qLVewAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:PROJECT>
