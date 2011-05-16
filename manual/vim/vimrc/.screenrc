@@ -1,0 +1,25 @@
+autodetach            on
+crlf                  off
+deflogin              off
+hardcopy_append       on
+startup_message       off
+vbell                 off
+defscrollback         10000
+silencewait           15
+shell                 bash
+#hardstatus            alwayslastline "%H | %d-%m-%y %c | %w Load: %l %{wk}"
+sorendition           03 60
+# caption always "%H | %Y-%m-%d | %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<%=%c | Load: %l"
+hardstatus            alwayslastline "%H | %Y-%m-%d | %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<%=%c | Load: %l"
+activity              "activity in %n (%t) [%w:%s]~"
+bell                  "schau in %n (%t) [%w:%s]~"
+vbell_msg             " *Ruhe!* "
+bind h hardcopy
+bind P paste          .
+bind ~ activity       "activity in %n (%t) [%w:%s]~"
+bind * activity       "activity in %n (%t) [%w:%s]"
+bind E screen -t 'mutt'    1 mutt
+bind G screen -t 'Google'  5 links http://www.google.com  
+bind N screen -t 'Notiz' 6 bash -c ~/bin/notiz
+bind T screen -t 'todo ' 7 bash -c ~/bin/todo
+
