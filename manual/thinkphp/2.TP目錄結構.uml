@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+<XPD:SUBUNITS>
+</XPD:SUBUNITS>
+<XPD:PROFILES>
+<XPD:PROFILE>UMLStandard</XPD:PROFILE>
+</XPD:PROFILES>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLProject" guid="P8098K+RtE+OEw1qfWKF0AAA">
+<XPD:ATTR name="Title" type="string">Untitled</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">5</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="8aAg+dmjykmIVsmxTPbNkQAA">
+<XPD:ATTR name="Name" type="string">Use Case Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">useCaseModel</XPD:ATTR>
+<XPD:REF name="Namespace">P8098K+RtE+OEw1qfWKF0AAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLUseCaseDiagram" guid="c9tApx1u6kaLqx28GCHnbAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">8aAg+dmjykmIVsmxTPbNkQAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLUseCaseDiagramView" guid="Pr+hlo6bnkeWdqb8ky6dBAAA">
+<XPD:REF name="Diagram">c9tApx1u6kaLqx28GCHnbAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="lBJg5Sx4DEuobH0UhYGk9wAA">
+<XPD:ATTR name="Name" type="string">Analysis Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">analysisModel</XPD:ATTR>
+<XPD:REF name="Namespace">P8098K+RtE+OEw1qfWKF0AAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="V6/9fPRfHky+HfKnXkk2IgAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
+<XPD:ATTR name="DiagramType" type="string">RobustnessDiagram</XPD:ATTR>
+<XPD:REF name="DiagramOwner">lBJg5Sx4DEuobH0UhYGk9wAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="DMZD/+t4+USsAf2aGXLIkwAA">
+<XPD:REF name="Diagram">V6/9fPRfHky+HfKnXkk2IgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[2]" type="UMLModel" guid="U6vnqirCvE+LkT2KdDaxCAAA">
+<XPD:ATTR name="Name" type="string">Design Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">designModel</XPD:ATTR>
+<XPD:REF name="Namespace">P8098K+RtE+OEw1qfWKF0AAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="xCg/cKABQkmRfZ9sbK+E9wAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
+<XPD:REF name="DiagramOwner">U6vnqirCvE+LkT2KdDaxCAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="ikLGbbHLbU+4fPoSp/FhPgAA">
+<XPD:REF name="Diagram">xCg/cKABQkmRfZ9sbK+E9wAA</XPD:REF>
+<XPD:ATTR name="#OwnedViews" type="integer">7</XPD:ATTR>
+<XPD:OBJ name="OwnedViews[0]" type="UMLNoteView" guid="JPN1ET0BL0qJtwdP7hrBJAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">101</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">128</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">.
+|-- Common
+|-- Lang
+|-- Lib
+|-- Mode
+|-- ThinkPHP.php
+|-- Tpl
+`-- Vendor
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[1]" type="UMLNoteView" guid="Li0EOWKDWUm3MyVJfDP1rAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">152</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">482</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">173</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Common
+|-- alias.php
+|-- compat.php            //對php&lt;5.2時的兼容函數
+|-- convention.php      //配置慣例/默認配置
+|-- core.php                //系统默认的核心列表文件，會編譯到~runtime.php或~allinone.php中
+|-- debug.php             //與debug有關的配置
+|-- defines.php
+|-- extend.php
+|-- functions.php        //公共函數文件
+|-- paths.php             //路徑定義文件，定義項目Runtime目錄下待生成的目錄
+`-- runtime.php         //生成核心編譯緩存文件~runtime.php
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[2]" type="UMLNoteView" guid="B8d7SQpBBEG1iLMoyiFSOgAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">384</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">211</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">1283</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Lib
+|-- ORG
+|   |-- Crypt
+|   |   |-- Base64.class.php
+|   |   |-- Crypt.class.php
+|   |   |-- Des.class.php
+|   |   |-- Rsa.class.php
+|   |   `-- Xxtea.class.php
+|   |-- Io
+|   |   `-- Dir.class.php
+|   |-- Net
+|   |   |-- Http.class.php
+|   |   |-- IpLocation.class.php
+|   |   `-- UploadFile.class.php
+|   `-- Util
+|       |-- ArrayList.class.php
+|       |-- CodeSwitch.class.php
+|       |-- Date.class.php
+|       |-- HashMap.class.php
+|       |-- Image.class.php
+|       |-- Input.class.php
+|       |-- Page.class.php
+|       |-- RBAC.class.php
+|       |-- Socket.class.php
+|       |-- Stack.class.php
+|       `-- String.class.php
+`-- Think
+    |-- Core
+    |   |-- Action.class.php
+    |   |-- App.class.php
+    |   |-- Log.class.php
+    |   |-- Model
+    |   |   |-- AdvModel.class.php
+    |   |   |-- RelationModel.class.php
+    |   |   `-- ViewModel.class.php
+    |   |-- Model.class.php
+    |   |-- Think.class.php
+    |   `-- View.class.php
+    |-- Db
+    |   |-- Db.class.php
+    |   `-- Driver
+    |       |-- DbIbase.class.php
+    |       |-- DbMssql.class.php
+    |       |-- DbMysql.class.php
+    |       |-- DbMysqli.class.php
+    |       |-- DbOracle.class.php
+    |       |-- DbPdo.class.php
+    |       |-- DbPgsql.class.php
+    |       `-- DbSqlite.class.php
+    |-- Exception
+    |   `-- ThinkException.class.php
+    |-- Template
+    |   |-- TagLib
+    |   |   |-- TagLibCx.class.php
+    |   |   `-- TagLibHtml.class.php
+    |   |-- TagLib.class.php
+    |   |-- Tags
+    |   |   |-- cx.xml
+    |   |   `-- html.xml
+    |   `-- ThinkTemplate.class.php
+    `-- Util
+        |-- Behavior.class.php
+        |-- Cache
+        |   |-- CacheApachenote.class.php
+        |   |-- CacheApc.class.php
+        |   |-- CacheDb.class.php
+        |   |-- CacheEaccelerator.class.php
+        |   |-- CacheFile.class.php
+        |   |-- CacheMemcache.class.php
+        |   |-- CacheShmop.class.php
+        |   |-- CacheSqlite.class.php
+        |   `-- CacheXcache.class.php
+        |-- Cache.class.php
+        |-- Cookie.class.php
+        |-- Debug.class.php
+        |-- Dispatcher.class.php
+        |-- HtmlCache.class.php
+        |-- Session.class.php
+        |-- Template
+        |   |-- TemplateEase.class.php
+        |   |-- TemplateLite.class.php
+        |   |-- TemplateSmart.class.php
+        |   |-- TemplateSmarty.class.php
+        |   `-- TemplateThink.class.php
+        `-- Widget.class.php
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[3]" type="UMLNoteView" guid="+QGfClT36UO2XeDsXhERAgAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">1736</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">85</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">53</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Lang
+`-- zh-cn.php
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[4]" type="UMLNoteView" guid="DJ8hyx3DfUq+B70A2NSPxwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">1860</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">148</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">323</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Mode
+|-- Cli
+|   |-- Action.class.php
+|   |-- App.class.php
+|   `-- alias.php
+|-- Lite
+|   |-- Action.class.php
+|   |-- App.class.php
+|   |-- Db.class.php
+|   |-- Dispatcher.class.php
+|   |-- Model.class.php
+|   `-- alias.php
+|-- Thin
+|   |-- Action.class.php
+|   |-- App.class.php
+|   |-- Db.class.php
+|   |-- Model.class.php
+|   `-- alias.php
+|-- cli.php
+|-- lite.php
+`-- thin.php
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[5]" type="UMLNoteView" guid="3var5eg7s0WstZfP74poNAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">2260</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">147</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">53</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Tpl
+|-- PageTrace.tpl.php
+`-- ThinkException.tpl.php
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[6]" type="UMLNoteView" guid="LBH9peo7TUGMKHgt1+VOmwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">2376</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">107</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">113</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Vender
+|-- EaseTemplate
+|-- PHPUnit
+|-- SmartTemplate
+|-- Smarty
+`-- TemplateLite
+</XPD:ATTR>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="I0+uEA8IbEWMmW+qYXQq6wAA">
+<XPD:ATTR name="Name" type="string">Implementation Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">implementationModel</XPD:ATTR>
+<XPD:REF name="Namespace">P8098K+RtE+OEw1qfWKF0AAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="pJUn9ixTwEG5sJDyeslcWAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">I0+uEA8IbEWMmW+qYXQq6wAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="3fmu+nxbwkS/kd4P2zaUOgAA">
+<XPD:REF name="Diagram">pJUn9ixTwEG5sJDyeslcWAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[4]" type="UMLModel" guid="ogxkjydevkqbI6MWXzCC4AAA">
+<XPD:ATTR name="Name" type="string">Deployment Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">deploymentModel</XPD:ATTR>
+<XPD:REF name="Namespace">P8098K+RtE+OEw1qfWKF0AAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLDeploymentDiagram" guid="N1uRLU7+3kujJj3HNaYjPAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">ogxkjydevkqbI6MWXzCC4AAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLDeploymentDiagramView" guid="fIIRrPvv/UuxXZklqOEx4AAA">
+<XPD:REF name="Diagram">N1uRLU7+3kujJj3HNaYjPAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:PROJECT>
