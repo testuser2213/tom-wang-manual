@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+<XPD:SUBUNITS>
+</XPD:SUBUNITS>
+<XPD:PROFILES>
+<XPD:PROFILE>UMLStandard</XPD:PROFILE>
+</XPD:PROFILES>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLProject" guid="u5qg0kUZeE69UaEWWg7qSAAA">
+<XPD:ATTR name="Title" type="string">Untitled</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">5</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="t6JcXfQmzUKh8pH6qf1pOAAA">
+<XPD:ATTR name="Name" type="string">Use Case Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">useCaseModel</XPD:ATTR>
+<XPD:REF name="Namespace">u5qg0kUZeE69UaEWWg7qSAAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLUseCaseDiagram" guid="wr2cljvcDE6yUftzf5p9jgAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">t6JcXfQmzUKh8pH6qf1pOAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLUseCaseDiagramView" guid="xSLdxWs1OUeKhhgV/EK/nwAA">
+<XPD:REF name="Diagram">wr2cljvcDE6yUftzf5p9jgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="MlgXxbCsfE6UCMgFqE8a1gAA">
+<XPD:ATTR name="Name" type="string">Analysis Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">analysisModel</XPD:ATTR>
+<XPD:REF name="Namespace">u5qg0kUZeE69UaEWWg7qSAAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="I9wJSEHft0W5oWDmi5hZhAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
+<XPD:ATTR name="DiagramType" type="string">RobustnessDiagram</XPD:ATTR>
+<XPD:REF name="DiagramOwner">MlgXxbCsfE6UCMgFqE8a1gAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="7iJkNpn5vkm7ZS7gfQFSSQAA">
+<XPD:REF name="Diagram">I9wJSEHft0W5oWDmi5hZhAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[2]" type="UMLModel" guid="dft6QMkBr0WYVrl1iVsv+AAA">
+<XPD:ATTR name="Name" type="string">Design Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">designModel</XPD:ATTR>
+<XPD:REF name="Namespace">u5qg0kUZeE69UaEWWg7qSAAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="UmbWCHBZFkOZEKmDZEd+1QAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
+<XPD:REF name="DiagramOwner">dft6QMkBr0WYVrl1iVsv+AAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="kd0PPyQR9kGOns7NDiZq2QAA">
+<XPD:REF name="Diagram">UmbWCHBZFkOZEKmDZEd+1QAA</XPD:REF>
+<XPD:ATTR name="#OwnedViews" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="OwnedViews[0]" type="UMLNoteView" guid="4uCsj+Pzd0GbGQnUiXWwRAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">16</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">12</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">600</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">728</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">注意：有些常量可以在入口文件中定義（前面帶+的，#為可以定義但一般不會定義），這樣可以覆蓋掉默認值
+1、+APP_PATH：項目目錄，默認為項目入口文件所在目錄。
+2、#RUNTIME_PATH：項目RUNTIME目錄，默認為APP_PATH . '/Runtime/'。
+3、+RUNTIME_ALLINONE：是否啟用allinone模式，無默認值。
+4、+THINK_PATH：TP類庫所在目錄，默認值也是。
+5、+APP_NAME：項目名，默認是項目入口文件所在目錄的目錄名。
+6、RUNTIME_MODEL：
+7、#PATH_DEFINE_FILE：路徑定義文件，默認為THINK_PATH . '/Common/paths.php'。
+8、MAGIC_QUOTES_GPC：php6以下定義，值為get_magic_quotes_gpc()?True:False。
+9、MEMORY_LIMIT_ON：值為function_exists('memory_get_usage')。
+10、IS_CGI：值為substr(PHP_SAPI, 0,3)=='cgi' ? 1 : 0。
+11、IS_WIN：值為strstr(PHP_OS, 'WIN') ? 1 : 0。
+12、IS_CLI：值為PHP_SAPI=='cli'? 1   :   0。
+13、THINK_VERSION：值為2.0。
+// 14-32號常量都在PATH_DEFINE_FILE文件中定義
+14、CACHE_DIR：值為‘Cache’。
+15、HTML_DIR：值為‘Html’。
+16、CONF_DIR：值為‘Conf’。
+17、LIB_DIR：值為‘Lib’。
+18、LOG_DIR：值為‘Logs’。
+19、LANG_DIR：值為‘Lang’。
+20、TEMP_DIR：值為‘Temp’。
+21、TMPL_DIR：值為‘Tpl’。
+22、TMPL_PATH：值為APP_PATH.'/'.TMPL_DIR.'/'。
+23、HTML_PATH：值為APP_PATH.'/'.HTML_DIR.'/'。
+24、COMMON_PATH：值為APP_PATH.'/Common/'。
+25、LIB_PATH：值為APP_PATH.'/'.LIB_DIR.'/'。
+26、CACHE_PATH：值為RUNTIME_PATH.CACHE_DIR.'/'。
+27、CONFIG_PATH值為APP_PATH.'/'.CONF_DIR.'/'。
+28、LOG_PATH：RUNTIME_PATH.LOG_DIR.'/'。
+29、LANG_PATH：值為APP_PATH.'/'.LANG_DIR.'/'.
+30、TEMP_PATH：值為RUNTIME_PATH.TEMP_DIR.'/'。
+31、DATA_PATH：值為RUNTIME_PATH.'Data/'。
+32、VENDOR_PATH：值為THINK_PATH.'/Vendor/'。
+33、+THINK_MODE：可能值cli、lite、thin，默認值無。
+34、+NO_CACHE_RUNTIME：是否生成~runtime.php（只要定義了，就不會生成~runtime.php）。
+35、+STRIP_RUNTIME_SPACE：是否去除~runtime.php中的空格。
+36、+RUNTIME_ALLINONE：是否啟動allinone模式。
+37、RUNTIME_MODEL：當設置了RUNTIME_ALLINONE，並且能找到~allinone.php，則設置該常量為true。
+
+====================================================================
+以下是在非CLI下的常量
+#_PHP_FILE_：當前腳本文件名。
+#__ROOT__：网站URL根目录。
+URL_COMMON：值為0。
+URL_PATHINFO：值為1。
+URL_REWRITE：值為2。
+URL_COMPAT：值為3。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[1]" type="UMLNoteView" guid="9/zvfUtWS0eejdh1QK37WAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">656</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">12</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">459</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">68</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">注意：全局變量
+1、$GLOBALS['_beginTime']：加載TP文件開始時間。
+2、$GLOBALS['_loadTime']：加載TP文件結束時間。
+3、$GLOBALS['_startUseMems']：初始內存使用值，MEMORY_LIMIT_ON為true時才有。
+</XPD:ATTR>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="j7sGW4HPB02HFzNW/dMpqAAA">
+<XPD:ATTR name="Name" type="string">Implementation Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">implementationModel</XPD:ATTR>
+<XPD:REF name="Namespace">u5qg0kUZeE69UaEWWg7qSAAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="HoG4ZKcEq0qPzhkQ08RchgAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">j7sGW4HPB02HFzNW/dMpqAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="bOIINplrfkmRgT+nR7EUIQAA">
+<XPD:REF name="Diagram">HoG4ZKcEq0qPzhkQ08RchgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[4]" type="UMLModel" guid="Kf90INliaEObiXAQCCv7tAAA">
+<XPD:ATTR name="Name" type="string">Deployment Model</XPD:ATTR>
+<XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">deploymentModel</XPD:ATTR>
+<XPD:REF name="Namespace">u5qg0kUZeE69UaEWWg7qSAAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLDeploymentDiagram" guid="aAXp27+hwUiFjdroFZg9EwAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">Kf90INliaEObiXAQCCv7tAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLDeploymentDiagramView" guid="1TmTPZWpMUmR9PmcXYQ7rwAA">
+<XPD:REF name="Diagram">aAXp27+hwUiFjdroFZg9EwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:PROJECT>
