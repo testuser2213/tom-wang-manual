@@ -280,7 +280,6 @@ vnoremap <A-/> :call PhpDocRange()<CR>
 "------------------------bash
 autocmd filetype sh map <buffer> <leader><space> :w!<CR>:!/bin/bash %<CR>
 
-
 "-------------------------tab configure{{{
 map <leader>tn :tabnew %<cr>
 map <leader>te :tabedit <cr>
@@ -296,10 +295,7 @@ map <leader>6 :tabn 6 <cr>
 map <leader>7 :tabn 7 <cr>
 map <leader>8 :tabn 8 <cr>
 map <leader>9 :tabn 9 <cr>
-
 "}}}
-"
-"
 
 "Auto completion using the TAB key
 ""This function determines, wether we are on
@@ -318,14 +314,6 @@ endfunction
 "with InsertTabWrapper
 inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
 
-
-"function{{{
-"function! Test()
-"	let s = expand("%:h")
-"	echo s
-"endfunction
-"map mm :call Test()<CR>
-
 function! ApacheRestart()
 	!sudo apachectl -k restart
 endfunction
@@ -338,15 +326,13 @@ endfunction
 function! s:Command()
 	command! T call s:Test()
 endfunction
-
-
-"autocmd BufEnter * call s:Command()
 "}}}
 
-
-"""python{{{
+"python{{{
 autocmd FileType python set expandtab
 autocmd FileType python setlocal et sta sw=4 sts=4
 autocmd filetype python map <buffer> <leader><space> :w!<cr>:!/usr/bin/python %<cr>
 "}}}
-"--------------------- W --------------------"{{{                                                                                                
+
+" php manual
+autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
