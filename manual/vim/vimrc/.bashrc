@@ -12,4 +12,7 @@ alias tvb='cd /opt/php/lib/php/TVB;ll'
 alias ll='ls -al'
 alias cls='clear'
 alias vi='vim'
+
+# 设置自定义环境变量
 export SVN_EDITOR=/usr/bin/vim
+export PS1='[\u@\h \W]\$ '
