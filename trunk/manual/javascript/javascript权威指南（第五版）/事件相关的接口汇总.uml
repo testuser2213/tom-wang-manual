@@ -53,7 +53,7 @@
 <XPD:REF name="DiagramOwner">78BZjxLrEk+PWIr2AMuV5AAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="14DfoYL7FUa5mceVO6SGUAAA">
 <XPD:REF name="Diagram">g/W3pdK0o0OI8eyAJUhAMQAA</XPD:REF>
-<XPD:ATTR name="#OwnedViews" type="integer">22</XPD:ATTR>
+<XPD:ATTR name="#OwnedViews" type="integer">29</XPD:ATTR>
 <XPD:OBJ name="OwnedViews[0]" type="UMLClassView" guid="pTlE0mh3f0Og3daQITzWgwAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
@@ -233,8 +233,8 @@
 <XPD:OBJ name="OwnedViews[6]" type="UMLClassView" guid="F+MCAJj0LUS2E8N+0vW6LQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">340</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">332</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">580</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">428</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">86</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">173</XPD:ATTR>
 <XPD:REF name="Model">uAREbtZS/Ue1drt9RyRkOwAA</XPD:REF>
@@ -295,7 +295,7 @@
 <XPD:OBJ name="OwnedViews[8]" type="UMLGeneralizationView" guid="0KLh+bqLHEWrqs1xtHhmSwAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">425,356;475,284</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">582,428;515,284</XPD:ATTR>
 <XPD:REF name="Model">LD+/MB9tfkifsa2UXyOPkAAA</XPD:REF>
 <XPD:REF name="Head">17RbIQ5loECxIcoonVOXWQAA</XPD:REF>
 <XPD:REF name="Tail">F+MCAJj0LUS2E8N+0vW6LQAA</XPD:REF>
@@ -461,8 +461,8 @@
 <XPD:OBJ name="OwnedViews[14]" type="UMLNoteView" guid="4zFnPG/2Rka/UIPWeB5cXAAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">480</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">356</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">664</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">328</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">169</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">30</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">不是2级DOM标准的一部分。
@@ -471,15 +471,15 @@
 <XPD:OBJ name="OwnedViews[15]" type="UMLNoteLinkView" guid="1005xVSKfUaR214qXAy13QAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">600,258;568,356</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">635,258;729,328</XPD:ATTR>
 <XPD:REF name="Head">4zFnPG/2Rka/UIPWeB5cXAAA</XPD:REF>
 <XPD:REF name="Tail">T4R2XaiJAUi1auvoGp9AnwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedViews[16]" type="UMLNoteView" guid="7VEpf2hAoE64HH/7l3dPdQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">688</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">324</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">888</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">312</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">176</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">98</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">当文档结构发生变化的时候，
@@ -493,7 +493,7 @@ web程序员所普遍使用。
 <XPD:OBJ name="OwnedViews[17]" type="UMLNoteLinkView" guid="hcz/XhOQDUKgK61YTv4lZAAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">730,258;756,324</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">765,258;888,318</XPD:ATTR>
 <XPD:REF name="Head">7VEpf2hAoE64HH/7l3dPdQAA</XPD:REF>
 <XPD:REF name="Tail">2lh5hbPfE0WrjpyQ62vLtgAA</XPD:REF>
 </XPD:OBJ>
@@ -542,9 +542,133 @@ Event.CAPTURING_PHASE、Event.AT_TARGET或Event.BUBBLING_PHASE。
 <XPD:REF name="Head">kAmw3JcDH0S2sZUETSm1oAAA</XPD:REF>
 <XPD:REF name="Tail">bJDiAib6yE287NbdMSMH5QAA</XPD:REF>
 </XPD:OBJ>
+<XPD:OBJ name="OwnedViews[22]" type="UMLNoteView" guid="dASGKch8QUGQeGr5KMp/JQAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">252</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">392</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">143</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">属性：
+1、view：发生事件的Window对象，DOM术语中称为“视图”。
+2、一个数字，提供事件的额外信息。对于click事件、mousedown事件
+和mouseup事件，这个字段代表点击的次数，1代表点击1次，2代表
+双击，3代表点击3次。（注意，每次点击生成一个事件，但如果多次
+点击的间隔足够近，就可以用detail值说明它。简而言之，detail值为2的
+鼠标事件，前面总是有一个detail值为1的鼠标事件）。对于DOMActivate
+事件，这个字段的值为1，表示正常激活，2表示超级激活，如双击鼠标
+或同时按下shift键和Enter键。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[23]" type="UMLNoteLinkView" guid="+lzoQfs5n0a+fvUSTqnFEAAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">460,259;391,276</XPD:ATTR>
+<XPD:REF name="Head">dASGKch8QUGQeGr5KMp/JQAA</XPD:REF>
+<XPD:REF name="Tail">17RbIQ5loECxIcoonVOXWQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[24]" type="UMLNoteView" guid="3iH5qTAD0E6LsNakFr/RJwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">16</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">432</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">452</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">278</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">属性：
+1、button：一个数字，声明在mousedown，mouseup和click事件中，哪个鼠标
+键改变了状态。值为0表示左键，1表示中间键，2表示右键。这个属性只在
+鼠标键状态改变时使用，例如，在mouseover事件中，它不能用来汇报按键是
+否被按下并保持住了。还要注意，Netscape6弄错了它的值，不是用0、1和2表
+示，而是用1、2和3来表示，Netscape6.1修正了这个问题。
+2、altKey、ctrlKey、metaKey和shiftKey：这4个布尔值声明在鼠标事件发生时，
+是否按住了Alt键、Ctrl键、Meta键或Shift键。和button属性不同，这些键盘键属性
+对任何鼠标事件类型都有效。
+3、clientX、clientY：这两个属性声明鼠标指针相对于客户区或浏览器窗口的X坐标
+和Y坐标。注意，这2个坐标不考虑文档滚动，如果事件发生在窗口的顶部，无论
+文档滚动了多远，clientY都是0.但是，2级DOM没有提供把窗口坐标成文档坐标的
+标准方法。在ie外的浏览器中，加上window.pageXOffset和window.pageYOffset即可
+4、screenX、screenY：这两个属性声明了鼠标指针相对于用户显示器的左上角的
+X坐标和Y坐标。如果计划在鼠标事件所在地（或附近）打开一个新浏览器窗口，
+这两个值非常有用。
+5、relatedTarget：该属性引用和事件的目标节点相关的节点。对于mouseover事件
+，它是离开目标时，鼠标进入的节点。对于其他类型的事件来说，这个属性无用。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[25]" type="UMLNoteLinkView" guid="P2MmPAp55kaXx8jcHzNyVwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">580,520;467,537</XPD:ATTR>
+<XPD:REF name="Head">3iH5qTAD0E6LsNakFr/RJwAA</XPD:REF>
+<XPD:REF name="Tail">F+MCAJj0LUS2E8N+0vW6LQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[26]" type="UMLClassView" guid="gnQxbOXZxUGYOZ/a7ijn4AAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">20</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">744</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">90</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">238</XPD:ATTR>
+<XPD:REF name="Model">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+<XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="f8Y4njW7jUCQJ4qlzPPCEQAA">
+<XPD:OBJ name="NameLabel" type="LabelView" guid="MqnEEfpfj0CdZQuLeLfhugAA">
+<XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Event(ie)</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="StereotypeLabel" type="LabelView" guid="WEp8C0qQ0UG42A52mTeLIQAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="PropertyLabel" type="LabelView" guid="OuUuKXoVB0+98waxK/64AgAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:ATTR name="#OwnedElements" type="integer">15</XPD:ATTR>
+<XPD:OBJ name="AttributeCompartment" type="UMLAttributeCompartmentView" guid="DXUKgwYET0mcxhIWhgqQdgAA">
+<XPD:REF name="Model">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OperationCompartment" type="UMLOperationCompartmentView" guid="Os0/1W4DeECffOgV1VPHbQAA">
+<XPD:REF name="Model">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="TemplateParameterCompartment" type="UMLTemplateParameterCompartmentView" guid="ICjSveZOuU2ZgtuUDHn+sgAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+<XPD:REF name="Model">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[27]" type="UMLNoteView" guid="X262KnyDvEe46FDb+g+tEgAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">172</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">740</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">639</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">293</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">属性：
+1、type：一个字符串，声明发生的事件的类型，如click。它和DOM Event对象的type属性兼容。
+2、srcElement：发生事件的文档元素。和DOM Event对象的target属性兼容。
+3、button：一个整数，声明被按下的鼠标键。值为1表示左键，2表示右键，4表示中间键。如果按下多个键，
+这些值将加在一起。例如，左键和右键一起按下，则值为3。把这个属性和2级DOM的MouseEvent对象的button
+属性比较，尽管它们的属性名相同，但属性值的解释却不同。
+4、clientX、clientY：声明事件发生时鼠标的坐标，其值是相对于包含窗口的左上角生成的。这些属性和具有相同
+名字的2级DOM MouseEvent属性兼容。注意，对于比窗口大的文档，这些坐标和文档中的位置不同。要将这些窗口
+坐标转换为文档坐标，需要添加一个文档滚动的量。
+5、offsetX、offsetY：声明鼠标指针相对于源元素的位置。例如，用它们可以确定点击了Image对象的哪个像素。
+DOM事件模型中没有和它们等价的属性。
+6、altKey、ctrlKey、shiftKey：和DOM中的MouseEvent对象的同名属性兼容。但要注意，ie Event对象没有metaKey属性。
+7、keyCode：声明了keydown、keyup事件的键代码以及keypress事件的Unicode字符。用String.fromCharCode()方法可以
+把字符代码转换为字符串。
+8、formElement、toElement：fromElement声明mouseover事件中鼠标移到过的文档元素。toElement声明mouseout事件中
+鼠标移到的文档元素。它们等价于2级DOM中的MouseEvent对象的relatedTarget属性。
+9、cancelBubble：一个布尔值。把它设为true，可以阻止当前事件进一步起泡到包容层次的元素。
+10、returnValue：一个布尔值。把它设为false可以阻止浏览器执行与事件相关的默认动作。它可以替代由事件句柄返回
+false的老方法。
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[28]" type="UMLNoteLinkView" guid="YZNTFeOPX0qzQ+nCWw8CcgAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">172,868;109,864</XPD:ATTR>
+<XPD:REF name="Head">gnQxbOXZxUGYOZ/a7ijn4AAA</XPD:REF>
+<XPD:REF name="Tail">X262KnyDvEe46FDb+g+tEgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:ATTR name="#OwnedElements" type="integer">16</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLClass" guid="H3BFgU04X0ydao+HXwe3xgAA">
 <XPD:ATTR name="Name" type="string">EventTarget</XPD:ATTR>
 <XPD:REF name="Namespace">78BZjxLrEk+PWIr2AMuV5AAA</XPD:REF>
@@ -798,6 +922,76 @@ Event.CAPTURING_PHASE、Event.AT_TARGET或Event.BUBBLING_PHASE。
 <XPD:REF name="Views[1]">D9e/jk+ANEyYj+GyzVUAZgAA</XPD:REF>
 <XPD:REF name="Views[2]">/OSuQ9hvG0uuBkReA6vG0QAA</XPD:REF>
 <XPD:REF name="Views[3]">H+j07LQ1q0m2/VYMiKWvtgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[15]" type="UMLClass" guid="LfwPwYtT1k23geKofRqfrAAA">
+<XPD:ATTR name="Name" type="string">Event(ie)</XPD:ATTR>
+<XPD:REF name="Namespace">78BZjxLrEk+PWIr2AMuV5AAA</XPD:REF>
+<XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
+<XPD:REF name="Views[0]">gnQxbOXZxUGYOZ/a7ijn4AAA</XPD:REF>
+<XPD:REF name="Views[1]">DXUKgwYET0mcxhIWhgqQdgAA</XPD:REF>
+<XPD:REF name="Views[2]">Os0/1W4DeECffOgV1VPHbQAA</XPD:REF>
+<XPD:REF name="Views[3]">ICjSveZOuU2ZgtuUDHn+sgAA</XPD:REF>
+<XPD:ATTR name="#Attributes" type="integer">15</XPD:ATTR>
+<XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="pYcOQCSCA0OgY66Jr5tvhQAA">
+<XPD:ATTR name="Name" type="string">type</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="RLEN84tDykOWVi7GG7in+QAA">
+<XPD:ATTR name="Name" type="string">srcElement</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="tvuOIcmTkUOtsvfGKFhyUAAA">
+<XPD:ATTR name="Name" type="string">button</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="C4mfA5UJ60GyVV7I3tkflQAA">
+<XPD:ATTR name="Name" type="string">clientX</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[4]" type="UMLAttribute" guid="iDMWk1mOLUyHY82SMwqSHwAA">
+<XPD:ATTR name="Name" type="string">clientY</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[5]" type="UMLAttribute" guid="+s/2WYofS06vzf+jZMrnrAAA">
+<XPD:ATTR name="Name" type="string">offsetX</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[6]" type="UMLAttribute" guid="/DIhkuBfk0ikPQ3WedfZ1AAA">
+<XPD:ATTR name="Name" type="string">offsetY</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[7]" type="UMLAttribute" guid="7sWu9yeypkuQKedMGiDHegAA">
+<XPD:ATTR name="Name" type="string">altKey</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[8]" type="UMLAttribute" guid="6ziWsAyVl0OSiifV5Yy15QAA">
+<XPD:ATTR name="Name" type="string">ctrlKey</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[9]" type="UMLAttribute" guid="IDAQJ32HmE2Sx2fHavx9XQAA">
+<XPD:ATTR name="Name" type="string">shiftKey</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[10]" type="UMLAttribute" guid="evd+lGOuykSVAdEUwuSzogAA">
+<XPD:ATTR name="Name" type="string">keyCode</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[11]" type="UMLAttribute" guid="rWAUEpJ6u06Jn3XZ9QOYyAAA">
+<XPD:ATTR name="Name" type="string">fromElement</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[12]" type="UMLAttribute" guid="Z7b+i/CrJkKMn7uz2VyA7QAA">
+<XPD:ATTR name="Name" type="string">toElement</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[13]" type="UMLAttribute" guid="TMoHddzwmEG1qcz2/IW/VwAA">
+<XPD:ATTR name="Name" type="string">cancelBubble</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[14]" type="UMLAttribute" guid="5Upd4J7a0EeyIq//EdOFCQAA">
+<XPD:ATTR name="Name" type="string">returnValue</XPD:ATTR>
+<XPD:REF name="Owner">LfwPwYtT1k23geKofRqfrAAA</XPD:REF>
+</XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="qFEco+O9mEmAlmhFtYYKewAA">
