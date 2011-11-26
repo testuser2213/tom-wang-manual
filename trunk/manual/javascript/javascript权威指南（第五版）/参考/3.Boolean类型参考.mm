@@ -1,0 +1,7 @@
+<map version="0.8.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1302744582085" ID="Freemind_Link_1755801840" MODIFIED="1322317330796" TEXT="Boolean&#x7c7b;&#x578b;&#x53c2;&#x8003;(tom.wang) &#xa;Object-&gt;Boolean&#xa;Follow&#xff1a;http://t.qq.com/superlinyzu">
+<node CREATED="1322317343796" ID="_" MODIFIED="1322317615203" POSITION="right" TEXT="&#x6784;&#x9020;&#x51fd;&#x6570;&#xa;new Boolean(value)&#xff1a;&#x6784;&#x9020;&#x51fd;&#x6570;&#xa;Boolean(value)&#xff1a;&#x8f6c;&#x6362;&#x51fd;&#x6570;&#xa;1&#x3001;0&#xff0c;NaN&#xff0c;null&#xff0c;&#x7a7a;&#x5b57;&#x7b26;&#x4e32;&quot;&quot;&#x548c;undefined&#x503c;&#x90fd;&#x5c06;&#x8f6c;&#x6362;&#x6210;false&#x3002;&#x5176;&#x4ed6;&#x7684;&#x539f;&#x59cb;&#x503c;&#xff0c;&#x9664;&#x4e86;false&#xff08;&#x4f46;&#x5305;&#x62ec;&#x5b57;&#x7b26;&#x4e32;&#x201c;false&#x201d;&#xff09;&#xff0c;&#x4ee5;&#x53ca;&#x5176;&#x4ed6;&#x7684;&#x5bf9;&#x8c61;&#x548c;&#x6570;&#x7ec4;&#x90fd;&#x4f1a;&#x88ab;&#x8f6c;&#x6362;&#x6210;true&#x3002;"/>
+<node CREATED="1322317622109" ID="Freemind_Link_1060488244" MODIFIED="1322317807828" POSITION="right" TEXT="&#x65b9;&#x6cd5;&#xa;1&#x3001;toString()&#xff1a;&#x6839;&#x636e;Boolean&#x5bf9;&#x8c61;&#x4ee3;&#x8868;&#x7684;&#x5e03;&#x5c14;&#x503c;&#x8fd4;&#x56de;&#x201c;true&#x201d;&#x6216;&#x201c;false&#x201d;&#x3002;&#xa;2&#x3001;valueOf()&#xff1a;&#x8fd4;&#x56de;Boolean&#x5bf9;&#x8c61;&#x4e2d;&#x5b58;&#x653e;&#x7684;&#x539f;&#x59cb;&#x5e03;&#x5c14;&#x503c;&#x3002;"/>
+</node>
+</map>

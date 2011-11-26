@@ -26,7 +26,7 @@
 			// 避免和其他js库冲突
 			// deep : bool,确定是否让出catQuery
 			// newTag : string, 指定一个新的tag，类似$号
-			noConflict : function(deep/*=false*/, newTag) {
+			noConflict : function(deep/*=false*/, newTag/*=null*/) {
 				if(newTag) window[newTag] = window.$;
 				window.$ = _$;
 				if(deep) {
@@ -78,6 +78,12 @@
 		
 		window['$GLOBALS'] = {};
 	})();
+	
+	// 网络处理、ajax
+	catQuery.extend({
+		ajax : function() {
+		}
+	});
 	
 	// 将catQuery赋予全局对象及$
 	window.catQuery = window.$ = catQuery;
