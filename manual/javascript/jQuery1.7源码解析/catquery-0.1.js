@@ -105,6 +105,72 @@
 		gettype : function(arg) {
 			// 如果是Error对象，直接返回它的name值。
 			if(arg instanceof Error) return (arg.name || '').toLowerCase();
+		},
+		// 检查参数是否为空
+		empty : function(arg) {
+			if(!arg) return true;
+			// 字符串'0'也认为是空
+			if(arg === '0') return true;
+			// 空数组也认为是空
+			if(catQuery.is_array(arg) && !arg.length) return true;
+			// 空对象也认为是空
+			if(catQuery.is_object(arg)) {
+				for(var i in arg) {
+					return false;
+				}
+				return true;
+			}
+			
+			return false;
+		},
+		// 判断参数是不是对象
+		is_object : function(arg) {
+			return arg.constructor === Object;
+		},
+		// 判断参数是不是数组
+		is_array : function(arg) {
+			return arg.constructor === Array;
+		},
+		// 判断参数是不是布尔值
+		is_bool : function(arg) {
+			return arg.constructor === Boolean;
+		},
+		// 判断参数是不是null值
+		is_null : function(arg) {
+			return arg === null;
+		},
+		// 判断参数是不是数字
+		// NaN也是数字
+		is_numeric : function(arg, includeNaN/*=false*/) {
+			return arg.constructor === Number && (includeNaN ? true : !isNaN(arg));
+		},
+		// 判断参数是不是字符串
+		is_string : function(arg) {
+			return arg.constructor === String;
+		},
+		// 判断参数是不是整型
+		is_int : function(arg) {
+			if(isNaN(arg)) return false;
+			// 正、负无穷大是整数
+			if(!isFinite(arg)) return true;
+			return catQuery.is_numeric(arg) && arg === parseInt(arg + '');
+		},
+		is_integer : function(arg) {
+			return catQuery.is_int(arg);
+		},
+		is_long : function(arg) {
+			return catQuery.is_int(arg);
+		},
+		is_float : function(arg) {
+			return catQuery.is_numeric(arg) && !catQuery.is_int(arg);
+		},
+		is_double : function(arg) {
+			return catQuery.is_float(arg);
+		},
+		// 获取整数值，base指定进制
+		intval : function(arg, base/*=10*/) {
+			base = base || 10;
+			return parseInt(arg, base);
 		}
 	});
 	
