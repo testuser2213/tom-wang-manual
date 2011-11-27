@@ -23,6 +23,12 @@
 		
 		catQuery.extend({
 			version : '0.1', // catquery的版本
+			// 保存一些现有类型的原型方法
+			protos : {
+				slice : Array.prototype.slice,
+				trim : String.prototype.trim,
+				toString : Object.prototype.toString
+			},
 			// 避免和其他js库冲突
 			// deep : bool,确定是否让出catQuery
 			// newTag : string, 指定一个新的tag，类似$号
@@ -33,10 +39,19 @@
 					window.catQuery = _catQuery;
 				}
 			},
+			// 将catQuery的属性方法绑定到Window，这样可以直接调用
+			toGlobal : function(override/*=false*/) {
+				catQuery.extend(catQuery, window, override);
+			},
+			// 将参数转换为数组
+			toArray : function(arg) {
+				return catQuery.protos.slice.call(arg, 0);
+			},
 			// 重新绑定fn中的this（执行o）
 			// o为null时，则this指向Window
 			bind : function(fn, o/*=Window*/) {
 				return function() {
+					// 传递给apply的第二个参数只能是数组或Arguments对象。
 					return fn.apply(o, arguments);
 				}
 			},
@@ -82,6 +97,14 @@
 	// 网络处理、ajax
 	catQuery.extend({
 		ajax : function() {
+		}
+	});
+	
+	catQuery.extend({
+		// 获取对象的类型
+		gettype : function(arg) {
+			// 如果是Error对象，直接返回它的name值。
+			if(arg instanceof Error) return (arg.name || '').toLowerCase();
 		}
 	});
 	
