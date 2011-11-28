@@ -1,4 +1,8 @@
-;(function(window, undefined) {	
+;(function(window, undefined) {
+	// 全局配置
+	var _config = {
+		'domain' : 'example.com'
+	};
 	var catQuery = (function() {
 		var catQuery = function() {
 		},
@@ -44,6 +48,7 @@
 				catQuery.extend(catQuery, window, override);
 			},
 			// 将参数转换为数组
+			// 该方法如果作用于一个数组，可以实现复制这个数组（不再有引用关系）
 			toArray : function(arg) {
 				return catQuery.protos.slice.call(arg, 0);
 			},
@@ -71,6 +76,7 @@
 	
 	// 做一些初始化操作
 	(function() {
+		document.domain = _config['domain'];
 		if(!window.Node) window.Node = {};
 		catQuery.extend({
 			ELEMENT_NODE:				1,
@@ -97,6 +103,12 @@
 	// 网络处理、ajax
 	catQuery.extend({
 		ajax : function() {
+		}
+	});
+	
+	// 事件处理
+	catQuery.extend({
+		ready : function() {
 		}
 	});
 	
@@ -174,6 +186,54 @@
 		}
 	});
 	
+	// 封装数组操作
+	catQuery.extend({
+		CASE_UPPER : 0,
+		CASE_LOWER : 1,
+		// 返回字符串键名全为小写或大写的数组/对象
+		array_change_key_case : function(input, whatCase/*=catQuery.CASE_LOWER*/) {
+			// 如果是数字则直接返回
+			if(catQuery.is_array(input)) return catQuery.toArray(input);
+			if(whatCase === undefined) whatCase = catQuery.CASE_LOWER;
+			var method = (whatCase === catQuery.CASE_LOWER) ? String.prototype.toLowerCase : String.prototype.toUpperCase;
+			var output = {};
+			for(var i in input) {
+				output[method.call(i)] = input[i];
+			}
+			
+			return output;
+		},
+		// 将一个数组分割成多个
+		array_chunk : function(input, size, preserve_keys/*=false*/) {
+			function initItem() {
+				var item;
+				var isArr = catQuery.is_array(input);
+				if(!preserve_keys) {
+					item = [];
+				} else {
+					item = isArr ? [] : {};
+				}
+				return item;
+			}
+			var output = [];
+			var item = initItem();
+			var cnt = 0;
+			
+			for(var i in input) {
+				item[preserve_keys ? i : cnt] = input[i];
+				++cnt;
+				if(cnt >= size) {
+					output.push(item);
+					item = initItem();
+					cnt = 0;
+				}
+			}
+			if(cnt) output.push(item);
+			
+			return output;
+		}
+	});
+	
 	// 将catQuery赋予全局对象及$
 	window.catQuery = window.$ = catQuery;
-})(window);
+})(window/*在其他的javascript实现中，把这里的window改成相应的全局对象即可*/);
