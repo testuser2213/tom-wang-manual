@@ -9,3 +9,12 @@
 </body>
 </html>
 <script type="text/javascript" src="catquery-0.1.js"></script>
+<script type="text/javascript">
+	var o = {a:1, b:2};
+	var o1 = catQuery.array_change_key_case(o, catQuery.CASE_UPPER);
+	
+	var a = [1, 2, 3, 4, 5, 6, 7, 8];
+	var b = catQuery.array_chunk(a, 4);
+	var c = catQuery.array_chunk(a, 5);
+	var d = catQuery.array_chunk(a, 4, true);
+</script>

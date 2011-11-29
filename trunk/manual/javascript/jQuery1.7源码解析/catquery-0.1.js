@@ -100,6 +100,36 @@
 		window['$GLOBALS'] = {};
 	})();
 	
+	// 初始化$_GET
+	(function() {
+		// 当发生服务器端重定向时，document.URL指向当前装载的url。
+		var matches = document.URL.match(/^(?:([^\:\/\?#]+)\:)?(?:\/\/([^\/\?\:#]*))?(?:\:(\d+))?([^\?#]*)(?:\?([^#]*))?(?:#(.*))?$/i);
+		var isHttps = matches[1].toLowerCase() == 'https';
+		window['$_GET'] = {};
+		window['$_CLIENT'] = {};
+		catQuery.extend({
+			'URL' : matches[0] || '',
+			'PROTOCOL' : matches[1] || 'http',
+			'HOST' : matches[2],
+			'PORT' : matches[3] ? matches[3] : (isHttps ? 443 : 80),
+			'PATH' : matches[4] || '',
+			'QUERY_STRING' : matches[5] || '',
+			'HTTPS' : isHttps,
+			'ANCHOR' : matches[6] || '',
+			'USER_AGENT' : 'ie'
+		}, window['$_CLIENT']);
+		
+		// 设置$_GET
+		(function() {
+			if(!window['$_CLIENT']['QUERY_STRING']) return;
+			var pairs = window['$_CLIENT']['QUERY_STRING'].split('&');
+			for(var i in pairs) {
+				var keyVal = pairs[i].split('=');
+				window['$_GET'][keyVal[0]] = decodeURIComponent(keyVal[1]);
+			}
+		})();
+	})();
+	
 	// 网络处理、ajax
 	catQuery.extend({
 		ajax : function() {
@@ -229,6 +259,26 @@
 				}
 			}
 			if(cnt) output.push(item);
+			
+			return output;
+		},
+		// 创建一个数组，用一个数组的值作为其键名，另一个数组的值作为其值
+		array_combine : function(keys, values) {
+			// 如果两个数组的单元数不同或者数组为空时返回 FALSE。
+			if(!keys.length || !values.length || (keys.length != values.length)) return false;
+			var output = {};
+			for(var i = 0, j = keys.length; i < j; ++i) {
+				output[keys[i]] = values[i];
+			}
+			
+			return output;
+		},
+		// 统计数组中所有的值出现的次数
+		array_count_values : function(input) {
+			var output = {};
+			for(var i in input) {
+				++output[input[i]];
+			}
 			
 			return output;
 		}
