@@ -1,7 +1,8 @@
 ;(function(window, undefined) {
 	// 全局配置
 	var _config = {
-		'domain' : 'example.com'
+		'domain' : 'example.com',
+		'version' : '0.1'
 	};
 	var catQuery = (function() {
 		var catQuery = function() {
@@ -26,7 +27,7 @@
 		}
 		
 		catQuery.extend({
-			version : '0.1', // catquery的版本
+			version : _config['version'], // catquery的版本
 			// 保存一些现有类型的原型方法
 			protos : {
 				slice : Array.prototype.slice,
@@ -76,7 +77,7 @@
 	
 	// 做一些初始化操作
 	(function() {
-		document.domain = _config['domain'];
+		if(_config['domain']) document.domain = _config['domain'];
 		if(!window.Node) window.Node = {};
 		catQuery.extend({
 			ELEMENT_NODE:				1,
@@ -96,17 +97,29 @@
 		}, window.Event, false);
 		
 		catQuery.adjustBehaviors();
-		
-		window['$GLOBALS'] = {};
 	})();
 	
-	// 初始化$_GET
+	// 初始化$_GET、$_CLIENT
 	(function() {
 		// 当发生服务器端重定向时，document.URL指向当前装载的url。
 		var matches = document.URL.match(/^(?:([^\:\/\?#]+)\:)?(?:\/\/([^\/\?\:#]*))?(?:\:(\d+))?([^\?#]*)(?:\?([^#]*))?(?:#(.*))?$/i);
 		var isHttps = matches[1].toLowerCase() == 'https';
 		window['$_GET'] = {};
 		window['$_CLIENT'] = {};
+		var browser = (function() {
+			//safari:Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1
+			//chrome:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1
+			//opera:Opera/9.80 (Windows NT 5.1; U; Edition Next; zh-cn) Presto/2.8.158 Version/11.50
+			//msie:Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; InfoPath.1; .NET4.0C; .NET4.0E; InfoPath.2)
+			//firefox:Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2.24) Gecko/20111103 Firefox/3.6.24
+			var ua = navigator.userAgent.toLowerCase();
+			var rmsie = /(msie) ([\w.]+)/,
+			ropera = /(opera)(?:.*version)?[ \/]([\w.]+)/,
+			rchrome=/(chrome)[ \/]([\w.]+)/,
+			rfirefox=/(firefox)[ \/]([\w.]+)/,
+			rwebkit = /(webkit)[ \/]([\w.]+)/;
+			return ua.match(rmsie) || ua.match(rfirefox) || ua.match(rchrome) || ua.match(rwebkit) || [];
+		})();
 		catQuery.extend({
 			'URL' : matches[0] || '',
 			'PROTOCOL' : matches[1] || 'http',
@@ -116,13 +129,14 @@
 			'QUERY_STRING' : matches[5] || '',
 			'HTTPS' : isHttps,
 			'ANCHOR' : matches[6] || '',
-			'USER_AGENT' : 'ie'
+			'USER_AGENT' : browser[1] ? (browser[1] == 'webkit' ? 'safari' : browser[1]) : '',
+			'USER_AGENT_VERSION' : parseInt(browser[2] || 0)
 		}, window['$_CLIENT']);
 		
 		// 设置$_GET
 		(function() {
-			if(!window['$_CLIENT']['QUERY_STRING']) return;
-			var pairs = window['$_CLIENT']['QUERY_STRING'].split('&');
+			if(!matches[5]) return;
+			var pairs = matches[5].split('&');
 			for(var i in pairs) {
 				var keyVal = pairs[i].split('=');
 				window['$_GET'][keyVal[0]] = decodeURIComponent(keyVal[1]);
@@ -277,7 +291,8 @@
 		array_count_values : function(input) {
 			var output = {};
 			for(var i in input) {
-				++output[input[i]];
+				if(output[input[i]]) ++output[input[i]];
+				else output[input[i]] = 1;
 			}
 			
 			return output;
