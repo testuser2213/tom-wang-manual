@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../jasmine/lib/jasmine-1.1.0/jasmine.css">
+<script type="text/javascript" src="../jasmine/lib/jasmine-1.1.0/jasmine.js"></script>
+<script type="text/javascript" src="../jasmine/lib/jasmine-1.1.0/jasmine-html.js"></script>
+<script type="text/javascript">
+// 定义个新的Matcher
+beforeEach(function() {
+	this.addMatchers({
+		toShow : function() {
+			return this.actual;
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+</body>
+</html>
+<script type="text/javascript" src="../catquery-0.1.js"></script>
+<script type="text/javascript">
+describe('Array', function() {
+	it('', function() {
+		expect(Node.ELEMENT_NODE).toEqual(1);
+		expect(Event.CAPTURING_PHASE).toEqual(1);
+	});
+});
+
+jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+jasmine.getEnv().execute();
+</script>
