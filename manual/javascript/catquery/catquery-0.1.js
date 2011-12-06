@@ -18,7 +18,7 @@
 		// 该方法可用于扩展catQuery对象
 		catQuery.extend = function(src/*={}*/, dest/*=catQuery*/, override/*=false*/) {
 			src = src || {};
-			dest = dest || catQuery;
+			dest = dest || this;
 			for(var i in src) {
 				if(override || (!override && 'undefined' == typeof(dest[i]))) {
 					dest[i] = src[i];
@@ -46,12 +46,12 @@
 			},
 			// 将catQuery的属性方法绑定到Window，这样可以直接调用
 			toGlobal : function(override/*=false*/) {
-				catQuery.extend(catQuery, window, override);
+				this.extend(this, window, override);
 			},
 			// 将参数转换为数组
 			// 该方法如果作用于一个数组，可以实现复制这个数组（不再有引用关系）
 			toArray : function(arg) {
-				return catQuery.protos.slice.call(arg, 0);
+				return this.protos.slice.call(arg, 0);
 			},
 			// 重新绑定fn中的this（执行o）
 			// o为null时，则this指向Window
@@ -469,7 +469,47 @@
 	
 	// 事件处理
 	catQuery.extend({
-		ready : function() {
+		readyList : [],
+		DOMContentLoaded : function() {
+			while(this.readyList.length) {
+				this.readyList.splice(0, 1)[0]();
+			}
+		},
+		ready : function(fn/*, fn1, fn2, ...*/) {
+			var self = this;
+			if(document.readyState === "complete") {
+				return;
+			}
+			for (var i = 0, j = arguments.length; i < j; ++i) {
+				if(this.gettype(arguments[i]) == 'function') this.readyList.push(arguments[i]);
+			}
+			if(!arguments.callee.loaded) {
+				if(document.addEventListener) {
+					document.addEventListener("DOMContentLoaded", function() {
+						document.removeEventListener("DOMContentLoaded", arguments.callee, false);
+						self.DOMContentLoaded();
+					}, false);
+				} else if(document.attachEvent) {
+					document.attachEvent("onreadystatechange", function() {
+						if(document.readyState === "complete") {
+							document.detachEvent("onreadystatechange", arguments.callee);
+							self.DOMContentLoaded();
+						}
+						if(document.documentElement.doScroll && window == window.top) {
+							(function() {
+								try {
+									document.documentElement.doScroll("left");
+								} catch(e) {
+									setTimeout(arguments.callee, 0);
+									return;
+								}
+								self.DOMContentLoaded();
+							})();
+						}
+					});
+				}
+				arguments.callee.loaded = true;
+			}
 		}
 	});
 	
