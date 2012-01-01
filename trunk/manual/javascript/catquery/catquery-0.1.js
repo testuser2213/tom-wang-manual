@@ -26,6 +26,11 @@
 			}
 		}
 		
+		// extendFn方法用于将src中的属性扩展到catQuery.fn中
+		catQuery.extendFn = function(src) {
+			this.extend(src, this.fn);
+		}
+		
 		catQuery.extend({
 			version : _config['version'], // catquery的版本
 			// 保存一些现有类型的原型方法
@@ -539,9 +544,9 @@
 			// 字符串'0'也认为是空
 			if(arg === '0') return true;
 			// 空数组也认为是空
-			if(catQuery.is_array(arg) && !arg.length) return true;
+			if(this.is_array(arg) && !arg.length) return true;
 			// 空对象也认为是空
-			if(catQuery.is_object(arg)) {
+			if(this.is_object(arg)) {
 				for(var i in arg) {
 					return false;
 				}
@@ -580,19 +585,19 @@
 			if(isNaN(arg)) return false;
 			// 正、负无穷大是整数
 			if(!isFinite(arg)) return true;
-			return catQuery.is_numeric(arg) && arg === parseInt(arg + '');
+			return this.is_numeric(arg) && arg === parseInt(arg + '');
 		},
 		is_integer : function(arg) {
-			return catQuery.is_int(arg);
+			return this.is_int(arg);
 		},
 		is_long : function(arg) {
-			return catQuery.is_int(arg);
+			return this.is_int(arg);
 		},
 		is_float : function(arg) {
-			return catQuery.is_numeric(arg) && !catQuery.is_int(arg);
+			return this.is_numeric(arg) && !this.is_int(arg);
 		},
 		is_double : function(arg) {
-			return catQuery.is_float(arg);
+			return this.is_float(arg);
 		},
 		// 获取整数值，base指定进制
 		intval : function(arg, base/*=10*/) {
@@ -608,9 +613,9 @@
 		// 返回字符串键名全为小写或大写的数组/对象
 		array_change_key_case : function(input, whatCase/*=catQuery.CASE_LOWER*/) {
 			// 如果是数字则直接返回
-			if(catQuery.is_array(input)) return catQuery.toArray(input);
-			if(whatCase === undefined) whatCase = catQuery.CASE_LOWER;
-			var method = (whatCase === catQuery.CASE_LOWER) ? String.prototype.toLowerCase : String.prototype.toUpperCase;
+			if(this.is_array(input)) return this.toArray(input);
+			if(whatCase === undefined) whatCase = this.CASE_LOWER;
+			var method = (whatCase === this.CASE_LOWER) ? String.prototype.toLowerCase : String.prototype.toUpperCase;
 			var output = {};
 			for(var i in input) {
 				output[method.call(i)] = input[i];
@@ -622,7 +627,7 @@
 		array_chunk : function(input, size, preserve_keys/*=false*/) {
 			function initItem() {
 				var item;
-				var isArr = catQuery.is_array(input);
+				var isArr = this.is_array(input);
 				if(!preserve_keys) {
 					item = [];
 				} else {
