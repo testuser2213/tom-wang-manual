@@ -1,0 +1,6 @@
+<map version="0.8.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1302744582085" ID="Freemind_Link_1755801840" MODIFIED="1326527559390" TEXT="ProcessingInstruction&#x53c2;&#x8003;(tom.wang) &#xa;DOM1 XML&#xa;Node-&gt;ProcessingInstruction&#xa;Follow&#xff1a;http://t.qq.com/superlinyzu">
+<node CREATED="1326527688765" ID="_" MODIFIED="1326527810796" POSITION="right" TEXT="&#x5c5e;&#x6027;&#xa;1&#x3001;string data&#xff1a;&#x5904;&#x7406;&#x6307;&#x4ee4;&#x7684;&#x5185;&#x5bb9;&#xff08;&#x5373;&#x4ece;&#x76ee;&#x6807;&#x5f00;&#x59cb;&#x540e;&#x7684;&#x7b2c;&#x4e00;&#x4e2a;&#x975e;&#x7a7a;&#x683c;&#x5b57;&#x7b26;&#x5230;&#x7ed3;&#x675f;&#x5b57;&#x7b26;&#x201c;?&gt;&#x201d;&#x4e4b;&#x95f4;&#x7684;&#x5b57;&#x7b26;&#xff0c;&#x4f46;&#x4e0d;&#x5305;&#x62ec;&#x201c;?&gt;&#x201d;&#xff09;&#x3002;&#xa;2&#x3001;string target&#xff1a;&#x53ea;&#x8bfb;&#xff0c;&#x5904;&#x7406;&#x6307;&#x4ee4;&#x7684;&#x76ee;&#x6807;&#x3002;&#x5b83;&#x662f;&#x201c;&lt;?&#x201d;&#x540e;&#x7684;&#x7b2c;&#x4e00;&#x4e2a;&#x6807;&#x8bc6;&#x7b26;&#xff0c;&#x6307;&#x5b9a;&#x4e86;&#x5904;&#x7406;&#x6307;&#x4ee4;&#x7684;&#x5904;&#x7406;&#x5668;&#x3002;"/>
+</node>
+</map>
