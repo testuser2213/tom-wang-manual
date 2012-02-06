@@ -1,0 +1,7 @@
+<map version="0.8.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1302744582085" ID="Freemind_Link_1755801840" MODIFIED="1328190992296" TEXT="TableCell&#x53c2;&#x8003;(tom.wang) &#xa;DOM2 HTML&#xa;Node-&gt;Element-&gt;HTMLElement-&gt;TableCell&#xa;Follow&#xff1a;http://t.qq.com/superlinyzu">
+<node CREATED="1328194017000" ID="Freemind_Link_1096993233" MODIFIED="1328194039984" POSITION="right" TEXT="&#x6982;&#x8ff0;&#xa;1&#x3001;&#x8be5;&#x63a5;&#x53e3;&#x8868;&#x793a;HTML&#x8868;&#x4e2d;&#x7684;&lt;td&gt;&#x548c;&lt;th&gt;&#x5143;&#x7d20;&#x3002;"/>
+<node CREATED="1328193828437" ID="_" MODIFIED="1328194015093" POSITION="right" TEXT="&#x5c5e;&#x6027;&#xa;1&#x3001;long cellIndex&#xff1a;&#x53ea;&#x8bfb;&#xff0c;&#x8868;&#x5143;&#x5728;&#x5b83;&#x7684;&#x884c;&#x4e2d;&#x7684;&#x4f4d;&#x7f6e;&#x3002;&#xa;// &#x4ee5;&#x4e0b;&#x5c5e;&#x6027;&#x5bf9;&#x5e94;&#x4e8e;html&#x5c5e;&#x6027;&#xa;2&#x3001;string abbr&#xa;3&#x3001;string align&#xa;4&#x3001;string axis&#xa;5&#x3001;string bgColor&#xff1a;&#x5df2;&#x8fc7;&#x65f6;&#xa;6&#x3001;string ch&#xa;7&#x3001;string chOff&#xa;8&#x3001;long colSpan&#xa;9&#x3001;string headers&#xa;10&#x3001;string height&#xff1a;&#x5df2;&#x8fc7;&#x65f6;&#xa;11&#x3001;boolean noWrap&#xff1a;&#x5df2;&#x8fc7;&#x65f6;&#xa;12&#x3001;long rowSpan&#xa;13&#x3001;string scope&#xa;14&#x3001;string vAlign&#xa;15&#x3001;string width&#xff1a;&#x5df2;&#x8fc7;&#x65f6;"/>
+</node>
+</map>
