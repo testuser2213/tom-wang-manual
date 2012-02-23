@@ -1,0 +1,6 @@
+<map version="0.8.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1302744582085" ID="Freemind_Link_1755801840" MODIFIED="1329821203996" TEXT="Web&#x65f6;&#x4ee3;&#x7684;&#x53d8;&#x8fc1;(tom.wang) &#xa;Follow&#xff1a;http://t.qq.com/superlinyzu">
+<node CREATED="1329822217938" ID="_" MODIFIED="1329822452750" POSITION="right" TEXT="&#x6982;&#x8ff0;&#xa;1&#x3001;ACID3&#x6d4b;&#x8bd5;&#xff1a;&#x662f;&#x9488;&#x5bf9;&#x7f51;&#x9875;&#x6d4f;&#x89c8;&#x5668;&#x53ca;&#x8bbe;&#x8ba1;&#x8f6f;&#x4ef6;&#x4e4b;&#x6807;&#x51c6;&#x76f8;&#x5bb9;&#x6027;&#x7684;&#x4e00;&#x9879;&#x6d4b;&#x8bd5;&#x3002;&#x5b83;&#x9488;&#x5bf9;Web&#x5e94;&#x7528;&#x7a0b;&#x5e8f;&#x4e2d;&#x4f7f;&#x7528;&#x7740;&#x7684;&#x52a8;&#x6001;&#x5185;&#x5bb9;&#x8fdb;&#x884c;&#x68c0;&#x67e5;&#xff0c;&#x6d4b;&#x8bd5;&#x7126;&#x70b9;&#x4e3b;&#x8981;&#x96c6;&#x4e2d;&#x5728;ECMAScript&#x3001;DOM Level3&#x3001;Media Queries&#x548c;data:URIL&#x3002;&#x8fd9;&#x4e2a;&#x6d4b;&#x8bd5;&#x7684;&#x8bbe;&#x8ba1;&#x8005;&#xff0c;&#x6b63;&#x662f;&#x5728;W3C&#x5f00;&#x53d1;&#x53ca;&#x8bbe;&#x8ba1;&#x8005;&#xff0c;HTML5&#x7684;&#x91cd;&#x8981;&#x4eba;&#x7269;Ian Hickson&#x3002;"/>
+</node>
+</map>
