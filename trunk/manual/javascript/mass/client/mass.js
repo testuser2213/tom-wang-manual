@@ -4,6 +4,7 @@
 (function( global, DOC ){
     var
     _$ = global.$, //保存已有同名变量
+	// attention: 这里我认为没必要，直接指定一个字符串即可，所有版本保持一直
     namespace = DOC.URL.replace( /(#.+|\W)/g,''),
     w3c = DOC.dispatchEvent, //w3c事件模型
     HEAD = DOC.head || DOC.getElementsByTagName( "head" )[0],
@@ -40,11 +41,13 @@
         commonNs = $;//公用命名空间对象
     }
     if(commonNs.mass !== mass  ){
+		// 版本不一样
         commonNs[ mass ] = $;//保存当前版本的命名空间对象到公用命名空间对象上
         if(commonNs.mass || (_$ && typeof _$.mass !== "string")) {
             postfix = ( mass + "" ).replace( ".", "_" ) ;//是否强制使用多库共存
         }
     }else{
+		// 版本一样，直接跳出
         return;
     }
 
@@ -55,6 +58,8 @@
      * @return  {Object} 目标对象
      */
     function mix( target, source ){
+		// 第一个参数是目标对象，第二个参数及之后的参数是源对象，对后一个参数如果是布尔值，则指定源对象的属性是否覆盖目标对象的属性
+		// 如果覆盖是true，则后面的源对象覆盖前面源对象的同名属性
         var args = [].slice.call( arguments ), key,
         ride = typeof args[args.length - 1] == "boolean" ? args.pop() : true;
         target = target || {};
