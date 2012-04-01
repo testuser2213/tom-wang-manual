@@ -51,6 +51,10 @@
 		},
 		toString = class2type.toString,
 		slice = [].slice;
+		
+		"Boolean,Number,String,Function,Array,Date,RegExp,Window,Document,Arguments,NodeList".replace( /[^, ]+/g, function( name ){
+			class2type[ "[object " + name + "]" ] = name;
+		});
 	
 	mix($, {
 		qing : qing, // 版本号
