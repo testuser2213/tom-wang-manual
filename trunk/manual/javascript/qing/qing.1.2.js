@@ -5,7 +5,7 @@
  */
 ;(function(window, undefined) {
 	var _$ = window.$, // 保存$
-		qing = 1.0, // 版本
+		qing = 1.2, // 版本
 		qingNS = 'qing_framework', // 不同的版本这个不要改变
 		namespace = window[qingNS];
 	
@@ -67,7 +67,6 @@
 		noop : function() {}, // 空函数
 		/**
 		 * 实现多库共存
-		 * @param {String} newName 新的名字空间
 		 */
 		noConflict : function(newName) {
 			window['$'] = _$;
