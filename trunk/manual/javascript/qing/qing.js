@@ -36,6 +36,7 @@
 	}
 	
 	var doc = window.document,
+	    w3c = doc.dispatchEvent, //w3c事件模型
 		html = doc.documentElement,
 		head = doc.head || doc.getElementsByTagName('head')[0],
 		class2type = {
@@ -51,6 +52,7 @@
 		},
 		toString = class2type.toString,
 		slice = [].slice,
+		splice = [].splice,
 		rword = /[^, ]+/g;
 		
 	"Boolean,Number,String,Function,Array,Date,RegExp,Window,Document,Arguments,NodeList".replace( rword, function( name ){
@@ -185,6 +187,19 @@
             }else if( window.console ){
                 window.console.log( text );
             }
+        },
+		bind: w3c ? function( el, type, fn, phase ){
+            el.addEventListener( type, fn, !!phase );
+			// 如果绑定匿名函数，可以将该返回值用于unbind
+            return fn;
+        } : function( el, type, fn ){
+            el.attachEvent( "on"+type, fn );
+            return fn;
+        },
+        unbind: w3c ? function( el, type, fn, phase ){
+            el.removeEventListener( type, fn || $.noop, !!phase );
+        } : function( el, type, fn ){
+            el.detachEvent( "on"+type, fn || $.noop );
         }
 	});
 	
