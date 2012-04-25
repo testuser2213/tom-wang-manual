@@ -1,0 +1,159 @@
+模板
+1、变量
+模板:
+* {{name}}
+* {{age}}
+* {{company}}  //转义html
+* {{{company}}}  //不转义html
+* {{&company}}  //不转义html
+
+视图对象:
+{
+  "name": "Chris",
+  "company": "<b>GitHub</b>"
+}
+
+输出:
+* Chris
+*
+* &lt;b&gt;GitHub&lt;/b&gt;
+* <b>GitHub</b>
+* <b>GitHub</b>
+
+可以使用属性访问格式
+模板:
+* {{name.first}} {{name.last}}
+* {{age}}
+
+视图对象:
+{
+  "name": {
+    "first": "Michael",
+    "last": "Jackson"
+  },
+  "age": "RIP"
+}
+
+输出:
+* Michael Jackson
+* RIP
+
+2、小节
+1）、false值（undefined、null、''）或空列表——不展现
+模板:
+Shown.
+{{#nothin}}
+Never shown!
+{{/nothin}}
+
+视图数据:
+{
+  "person": true
+}
+
+输出:
+Shown.
+
+2）、非空列表
+模板:
+{{#stooges}}
+<b>{{name}}</b>
+{{/stooges}}
+
+视图:
+{
+  "stooges": [
+    { "name": "Moe" },
+    { "name": "Larry" },
+    { "name": "Curly" }
+  ]
+}
+
+输出:
+<b>Moe</b>
+<b>Larry</b>
+<b>Curly</b>
+
+注意：当视图是一个字符串数组时，“.”用于指定当前的选项
+模板:
+{{#musketeers}}
+* {{.}}
+{{/musketeers}}
+
+视图数据:
+{
+  "musketeers": ["Athos", "Aramis", "Porthos", "D'Artagnan"]
+}
+
+输出:
+* Athos
+* Aramis
+* Porthos
+* D'Artagnan
+
+注意：当变量是一个函数，它将在当前对象的上下文中调用
+模板:
+{{#beatles}}
+* {{name}}
+{{/beatles}}
+
+视图:
+{
+  "beatles": [
+    { "firstName": "John", "lastName": "Lennon" },
+    { "firstName": "Paul", "lastName": "McCartney" },
+    { "firstName": "George", "lastName": "Harrison" },
+    { "firstName": "Ringo", "lastName": "Starr" }
+  ],
+  "name": function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+输出:
+* John Lennon
+* Paul McCartney
+* George Harrison
+* Ringo Starr
+
+3）、函数：If the value of a section key is a function, it is called with the section's literal block of text, un-rendered, as its first argument. The second argument is a special rendering function that uses the current view as its view argument. It is called in the context of the current view object.
+模板:
+{{#bold}}Hi {{name}}.{{/bold}}
+
+视图:
+{
+  "name": "Tater",
+  "bold": function () {
+    return function (text, render) {
+      return "<b>" + render(text) + "</b>";
+    }
+  }
+}
+
+输出:
+<b>Hi Tater.</b>
+
+4）、反向小节
+An inverted section opens with {{^section}} instead of {{#section}}. The block of an inverted section is rendered only if the value of that section's tag is null, undefined, false, or an empty list.
+
+模板:
+{{#repos}}<b>{{name}}</b>{{/repos}}
+{{^repos}}No repos :({{/repos}}
+
+视图:
+{
+  "repos": []
+}
+
+输出:
+No repos :(
+
+3、注释
+Comments begin with a bang and are ignored. The following template:
+
+<h1>Today{{! ignore me }}.</h1>
+Will render as follows:
+
+<h1>Today.</h1>
+Comments may contain newlines.
+
