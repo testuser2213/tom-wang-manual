@@ -40,7 +40,9 @@
     if( typeof commonNs !== "function"){
         commonNs = $;//公用命名空间对象
     }
-    if(commonNs.mass !== mass  ){
+	// 这里if(commonNs.mass !== mass && commonNs[mass] !== $  ){更好些
+	// 如加载1.0、1.1、1.1，这样1.1版本会处理2次，虽然这样的情况较少
+    if(commonNs.mass !== mass ){
 		// 版本不一样
         commonNs[ mass ] = $;//保存当前版本的命名空间对象到公用命名空间对象上
         if(commonNs.mass || (_$ && typeof _$.mass !== "string")) {
@@ -80,9 +82,12 @@
         "@name": "$",
         "@debug": false,
         "@target": w3c ? "addEventListener" : "attachEvent",
+		// @path返回文档中最后一个script加载的js文件的路径
+		// 编码技巧：通过函数的参数定义，省去局部变量的定义
         "@path": (function( url, scripts, node ){
             scripts = DOC.getElementsByTagName( "script" );
             node = scripts[ scripts.length - 1 ];
+			// node.getAttribute('src', 4)是针对什么浏览器处理的？
             url = node.hasAttribute ?  node.src : node.getAttribute( 'src', 4 );
             return url.substr( 0, url.lastIndexOf('/') );
         })(),
@@ -108,6 +113,7 @@
             for(var i = 0, n = nodes.length, result = []; i < n; i++){
                 result[i] = nodes[i];
             }
+			// 编码技巧：arguments和形参一起结合使用
             if ( arguments.length > 1 ) {
                 return result.slice( start , ( end || result.length ) );
             } else {
@@ -159,8 +165,10 @@
         },
         uuid: 1,
         getUid: global.getComputedStyle ? function( node ){//用于建立一个从元素到数据的引用，以及选择器去重操作
+			// w3c实现
             return node.uniqueNumber || ( node.uniqueNumber = $.uuid++ );
         }: function( node ){
+			// ie实现
             var uid = node.getAttribute("uniqueNumber");
             if ( !uid ){
                 uid = $.uuid++;
