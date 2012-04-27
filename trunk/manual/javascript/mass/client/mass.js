@@ -202,6 +202,8 @@
     tokens = [],//需要处理的模块名列表
     transfer = {},//中转器，用于收集各个模块的返回值并转送到那些指定了依赖列表的模块去
     cbi = 1e5 ;//用于生成回调函数的名字
+	
+	//用于保存已加载的模块
     var mapper = $[ "@modules" ] = {
         "@ready" : { }
     };
@@ -220,8 +222,11 @@
      * @param {String} mass  当前框架的版本号
      */
     function load( name, url, mass ){
+		//如果@debug为true，则在url后加上时间戳后缀，这样js文件总是拉取最新的
         url = url  || $[ "@path" ] +"/"+ name.slice(1) + ".js" + ( $[ "@debug" ] ? "?timestamp="+(new Date-0) : "" );
         var iframe = DOC.createElement("iframe"),//IE9的onload经常抽疯,IE10 untest
+		//函数转换字符串，直接转换成函数的完整定义
+		//ie浏览器下Document拥有uniqueID属性，可以由此来区分ie和其他浏览器
         codes = ['<script>var nick ="', name, '", $ = {}, Ns = parent[document.URL.replace(/(#.+|\\W)/g,"")][',
         mass, ']; $.define = ', innerDefine, '<\/script><script src="',url,'" ',
         (DOC.uniqueID ? "onreadystatechange" : "onload"),
@@ -238,6 +243,7 @@
         d.write( codes.join('') );
         d.close();
         $.bind( iframe, "load", function(){
+			//d.ok是1（见上面codes里的代码）的话表示codes已经执行了，否则表示出错了
             if( global.opera && d.ok == void 0 ){
                 $._checkFail( name, true );//模拟opera的script onerror
             }
@@ -246,6 +252,7 @@
         });
     }
     //收集依赖列表对应模块的返回值，传入目标模块中执行
+	//assemble:收集、装配的意思
     function assemble( fn, args ){
 		// 编码技巧：部分语句可以压缩到for语句中，但是这样不够美观
         for ( var i = 0,argv = [], name; name = args[i++]; ) {
@@ -297,7 +304,8 @@
         //请求模块
 		//手册提到deps可以是数组，实现不支持
         require: function( deps, callback, errback ){//依赖列表,正向回调,负向回调
-			// cn用于成功加载的模块数目
+			// cn用于deps中已经成功加载并执行的模块数目
+			// dn表示deps中的模块数目
             var _deps = {}, args = [], dn = 0, cn = 0;
             ( deps +"" ).replace( $.rword, function( url, name, match ){
                 dn++;
@@ -375,6 +383,7 @@
         //用于检测这模块有没有加载成功
         _checkFail : function( name, error ){
             if( error || !mapper[ name ].state ){
+				//为什么不直接写function
                 this.stack( Function( 'window.'+ $["@name"] +'.log("fail to load module [ '+name+' ]")') );
                 this.stack.fire();//打印错误堆栈
             }
