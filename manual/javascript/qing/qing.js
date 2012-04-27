@@ -6,6 +6,7 @@
 ;(function(window, undefined) {
 	var _$ = window.$, // 保存$
 		qing = 1.0, // 版本
+		debug = true, // 是否调试，发布后设置为false
 		qingNS = 'qing_framework', // 不同的版本这个不要改变
 		namespace = window[qingNS];
 	
@@ -61,6 +62,7 @@
 	
 	mix($, {
 		qing : qing, // 版本号
+		debug : debug,
 		doc : doc,
 		html : html,
 		head : head,
