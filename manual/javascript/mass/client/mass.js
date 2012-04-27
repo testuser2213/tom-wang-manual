@@ -198,7 +198,7 @@
         class2type[ "[object " + name + "]" ] = name;
     });
     var
-    rmodule =  /([^(\s]+)\(?([^)]*)\)?/,
+    rmodule =  /([^(\s]+)\(?([^)]*)\)?/, //用于$.require方法，主要是分析moduleName(moduleUrl)类型的模块
     tokens = [],//需要处理的模块名列表
     transfer = {},//中转器，用于收集各个模块的返回值并转送到那些指定了依赖列表的模块去
     cbi = 1e5 ;//用于生成回调函数的名字
@@ -230,7 +230,7 @@
         '} " onerror="Ns._checkFail(nick, true);" ><\/script>' ];
         iframe.style.display = "none";
         //http://www.tech126.com/https-iframe/ http://www.ajaxbbs.net/post/webFront/https-iframe-warning.html
-        if( !"1"[0] ){//IE6 iframe在https协议下没有的指定src会弹安全警告框
+        if( !"1"[0] ){//IE6 iframe在https协议下没有指定src会弹安全警告框
             iframe.src = "javascript:false"
         }
         HEAD.insertBefore( iframe, HEAD.firstChild );
@@ -247,14 +247,23 @@
     }
     //收集依赖列表对应模块的返回值，传入目标模块中执行
     function assemble( fn, args ){
+		// 编码技巧：部分语句可以压缩到for语句中，但是这样不够美观
         for ( var i = 0,argv = [], name; name = args[i++]; ) {
             argv.push( transfer[name] );
         }
         return fn.apply( global, argv );
     }
+	/**
+	 * var list = deferred();
+	 * list(fn1)(fn2)(fn3); //只有函数才会加入到队列中
+	 * list.method = 'pop'; //可以定义处理方法，这里必须是Array拥有的方法，默认是shift
+	 * list.complete = function() {}; //可以定义完成时回调，这个方法在fire调用后调用，默认是空函数
+	 * list.fire(); //触发队列，所有加入队列的方法都执行后会调用complete方法。
+	 */
     function deferred(){//一个简单的异步列队
         var list = [],self = function(fn){
             fn && fn.call && list.push( fn );
+			// 编码技巧：函数返回自身
             return self;
         }
         self.method = "shift";
@@ -286,14 +295,16 @@
             el.detachEvent( "on"+type, fn || $.noop );
         },
         //请求模块
+		//手册提到deps可以是数组，实现不支持
         require: function( deps, callback, errback ){//依赖列表,正向回调,负向回调
+			// cn用于成功加载的模块数目
             var _deps = {}, args = [], dn = 0, cn = 0;
             ( deps +"" ).replace( $.rword, function( url, name, match ){
                 dn++;
                 match = url.match( rmodule );
                 name  = "@"+ match[1];//取得模块名
                 if( !mapper[ name ] ){ //防止重复生成节点与请求
-                    mapper[ name ] = { };//state: undefined, 未加载; 1 已加载; 2 : 已执行
+                    mapper[ name ] = { };//state: undefined 未加载; 1 已加载; 2 已执行
                     load( name, match[2], $.mass );//加载JS文件
                 }else if( mapper[ name ].state === 2 ){
                     cn++;
