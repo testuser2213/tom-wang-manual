@@ -201,7 +201,7 @@
     rmodule =  /([^(\s]+)\(?([^)]*)\)?/, //用于$.require方法，主要是分析moduleName(moduleUrl)类型的模块
     tokens = [],//需要处理的模块名列表
     transfer = {},//中转器，用于收集各个模块的返回值并转送到那些指定了依赖列表的模块去
-    cbi = 1e5 ;//用于生成回调函数的名字
+    cbi = 1e5 ;//用于生成回调函数的名字，cbi可以理解成callback index
 	
 	//用于保存已加载的模块
     var mapper = $[ "@modules" ] = {
