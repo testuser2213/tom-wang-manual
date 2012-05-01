@@ -233,6 +233,11 @@
 	 *
 	 */
 	function $(expr, context) {
+		if($.type( expr,"Function" )) {
+			// domReady
+			readylist(expr);
+		} else {
+		}
 	}
 	
 	/**
