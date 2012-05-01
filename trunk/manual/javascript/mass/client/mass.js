@@ -82,7 +82,7 @@
         "@name": "$",
         "@debug": false,
         "@target": w3c ? "addEventListener" : "attachEvent",
-		// @path返回文档中最后一个script加载的js文件的路径
+		// @path返回文档中最后一个（这里实际是当前代码库的路径）script加载的js文件的路径
 		// 编码技巧：通过函数的参数定义，省去局部变量的定义
         "@path": (function( url, scripts, node ){
             scripts = DOC.getElementsByTagName( "script" );
@@ -199,11 +199,13 @@
     });
     var
     rmodule =  /([^(\s]+)\(?([^)]*)\)?/, //用于$.require方法，主要是分析moduleName(moduleUrl)类型的模块
-    tokens = [],//需要处理的模块名列表
+    tokens = [],//需要处理的模块名列表（即该模块所依赖的其他模块还没有执行完毕）
     transfer = {},//中转器，用于收集各个模块的返回值并转送到那些指定了依赖列表的模块去
-    cbi = 1e5 ;//用于生成回调函数的名字，cbi可以理解成callback index
+    cbi = 1e5 ;//用于生成回调函数的名字，cbi可以理解成callback index/increment
 	
 	//用于保存已加载的模块
+	//以模块名为键
+	//值的格式为{callback:回调, name:模块名，带@, deps:依赖的模块列表对象, args:依赖模块数组, state:值}
     var mapper = $[ "@modules" ] = {
         "@ready" : { }
     };
@@ -223,6 +225,7 @@
      */
     function load( name, url, mass ){
 		//如果@debug为true，则在url后加上时间戳后缀，这样js文件总是拉取最新的
+		//name都是以“@”开头的，所以这里要从第1个字符截取
         url = url  || $[ "@path" ] +"/"+ name.slice(1) + ".js" + ( $[ "@debug" ] ? "?timestamp="+(new Date-0) : "" );
         var iframe = DOC.createElement("iframe"),//IE9的onload经常抽疯,IE10 untest
 		//函数转换字符串，直接转换成函数的完整定义
@@ -303,6 +306,7 @@
         },
         //请求模块
 		//手册提到deps可以是数组，实现不支持
+		// 一般不直接调用，通过define方法调用
         require: function( deps, callback, errback ){//依赖列表,正向回调,负向回调
 			// cn用于deps中已经成功加载并执行的模块数目
 			// dn表示deps中的模块数目
@@ -317,11 +321,13 @@
                 }else if( mapper[ name ].state === 2 ){
                     cn++;
                 }
+				// 对依赖列表去重
                 if( !_deps[ name ] ){
                     args.push( name );
                     _deps[ name ] = "司徒正美";//去重，去掉@ready
                 }
             });
+			// 这里的token也就是模块名，有“@”前缀，见下面define方法
             var token = callback.token;
             if( dn === cn ){//在依赖都已执行过或没有依赖的情况下
                 if( token && !( token in transfer ) ){
@@ -366,6 +372,7 @@
             for ( var i = tokens.length, repeat, name; name = tokens[ --i ]; ) {
                 var obj = mapper[ name ], deps = obj.deps;
                 for( var key in deps ){
+					// hasOwnProperty判断属性是否是非继承的
                     if( deps.hasOwnProperty( key ) && mapper[ key ].state != 2 ){
                         continue loop;
                     }
@@ -378,7 +385,7 @@
                     repeat = true;
                 }
             }
-        repeat && $._checkDeps();
+			repeat && $._checkDeps();
         },
         //用于检测这模块有没有加载成功
         _checkFail : function( name, error ){

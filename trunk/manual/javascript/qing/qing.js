@@ -205,6 +205,27 @@
         }
 	});
 	
+	//domReady机制
+    var readylist = deferred();
+	
+	//开始判定页面的加载情况
+    if ( doc.readyState === "complete" ) {
+        fireReady();
+    }else {
+        $.bind( doc, ( w3c ? "DOMContentLoaded" : "readystatechange" ), function(){
+            if ( w3c || doc.readyState === "complete" ){
+                fireReady();
+            }
+        });
+        if( $.html.doScroll && self.eval === top.eval ){
+            doScrollCheck();
+        }
+    }
+    //https://developer.mozilla.org/en/DOM/window.onpopstate
+    $.bind( window, "popstate", function(){
+        $.exports('$');
+    });
+	
 	// 导出到全局空间
 	$.exports('$');
 	
@@ -236,4 +257,46 @@
         }
         return target;
     }
+	
+	/**
+	 * var list = deferred();
+	 * list(fn1)(fn2)(fn3); //只有函数才会加入到队列中
+	 * list.method = 'pop'; //可以定义处理方法，这里必须是Array拥有的方法，默认是shift
+	 * list.complete = function() {}; //可以定义完成时回调，这个方法在fire调用后调用，默认是空函数
+	 * list.fire(); //触发队列，所有加入队列的方法都执行后会调用complete方法。
+	 */
+    function deferred(){//一个简单的异步列队
+        var list = [],self = function(fn){
+            fn && fn.call && list.push( fn );
+			// 编码技巧：函数返回自身
+            return self;
+        }
+        self.method = "shift";
+        self.fire = function( fn ){
+            while( fn = list[ self.method ]() ){
+                fn();
+            }
+            return list.length ? self : self.complete();
+        }
+        self.complete = $.noop;
+        return self;
+    }
+	
+	function fireReady(){
+		// complete函数似乎不接收参数，参见deferred方法
+        readylist.complete = function( fn ){
+            $.type( fn, "Function") &&  fn();
+        }
+        readylist.fire();
+        fireReady = $.noop;
+    };
+	
+	function doScrollCheck() {
+        try {
+            $.html.doScroll( "left" );
+            fireReady();
+        } catch(e) {
+            setTimeout( doScrollCheck, 1 );
+        }
+    };
 })(window);
