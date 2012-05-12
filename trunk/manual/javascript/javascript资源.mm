@@ -26,6 +26,7 @@
 <node CREATED="1334896385775" ID="Freemind_Link_850023962" MODIFIED="1334896389201" POSITION="right" TEXT="&#x6587;&#x6863;">
 <node CREATED="1334896392494" ID="Freemind_Link_1843607592" MODIFIED="1334896441020" TEXT="jgrousedoc&#xa;1&#x3001;&#x8bf4;&#x660e;&#xff1a;&#x53ef;&#x6839;&#x636e; JavaScript &#x6e90;&#x7801;&#x751f;&#x6210;&#x7c7b;&#x4f3c; Javadoc &#x7684;&#x6e90;&#x7801;&#x6587;&#x6863;&#x3002;&#xa;2&#x3001;&#x9879;&#x76ee;&#x5730;&#x5740;&#xff1a;http://code.google.com/p/jgrousedoc/&#xa;3&#x3001;osc&#x5730;&#x5740;&#xff1a;http://www.oschina.net/p/jgrousedoc"/>
 <node CREATED="1330776030203" ID="_" MODIFIED="1334896464869" TEXT="jsdoc toolkit&#xa;&#x9879;&#x76ee;&#x5730;&#x5740;&#xff1a;http://code.google.com/p/jsdoc-toolkit/"/>
+<node CREATED="1336794343750" ID="Freemind_Link_1554638966" MODIFIED="1336794394390" TEXT="yuidoc&#xa;&#x9879;&#x76ee;&#x5730;&#x5740;&#xff1a;http://developer.yahoo.com/yui/yuidoc/&#xa;osc&#x5730;&#x5740;&#xff1a;http://www.oschina.net/p/yuidoc"/>
 </node>
 </node>
 </map>
