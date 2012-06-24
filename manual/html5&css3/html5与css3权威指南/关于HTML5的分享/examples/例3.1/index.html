@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>form：表单元素不必放在表单内部</h4>
+<form id="form1" action="action1.php" method="post">
+<input type="submit" value="提交1" />
+</form>
+<form id="form2" action="action1.php" method="post">
+<input type="submit" value="提交2" />
+</form>
+<input type="text" name="name1" value="text1" form="form1" />
+<input type="text" name="name2" value="text2" form="form2" />
+</body>
+</html>
