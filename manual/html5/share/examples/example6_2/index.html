@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>本地数据库：留言板</h4>
+<div id="session_div">
+</div>
+<form name="form1">
+	<textarea name="session_ta"></textarea>
+	<input type="submit" />
+</form>
+<script type="text/javascript">
+	function render() {
+		db.transaction(function(tx) {
+			// 取出数据
+			tx.executeSql('SELECT txt FROM message', null, function(tx, data) {
+				var rows = data.rows,
+					len = rows.length,
+					html = '',
+					div = document.getElementById('session_div'),
+					row;
+				for(var index = 0; index < len; ++index) {
+					row = rows.item(index);
+					html += row['txt'] + '<br />';
+				}
+				
+				div.innerHTML = html;
+			});
+		});
+	}
+	
+	function add(txt) {
+		db.transaction(function(tx) {
+			// 插入数据
+			tx.executeSql('INSERT INTO message (txt) VALUES(\'' + txt + '\')');
+		});
+	}
+	
+	// 4个参数分别是数据库名、版本号（对版本没有要求，直接指定空字符串即可）、数据库的描述、数据库的大小。
+	var db = openDatabase('mydb', '', 'Test DB', 2 * 1024 * 1024);
+	db.transaction(function(tx) {
+		// 创建数据表
+		tx.executeSql('CREATE TABLE IF NOT EXISTS message (txt string)');
+	});
+	
+	// 显示到页面
+	render();
+	
+	document.form1.onsubmit = function() {
+		var txt = this.session_ta.value;
+		add(txt);
+		render();
+		
+		return false;
+	}
+</script>
+</body>
+</html>

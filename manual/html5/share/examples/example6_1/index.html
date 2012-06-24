@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>sessionStorage：留言板</h4>
+<div id="session_div">
+</div>
+<form name="form1">
+	<textarea name="session_ta"></textarea>
+	<input type="submit" />
+</form>
+<script type="text/javascript">
+	function render(key) {
+		var data = sessionStorage.getItem(key),
+		div = document.getElementById('session_div');
+		
+		div.innerHTML = data;
+	}
+	
+	function add(key, txt) {
+		// getItem：没有key对应的数据时返回null
+		var data = sessionStorage.getItem(key) || '';
+		sessionStorage.setItem(key, data + txt + '<br />');
+	}
+	
+	var key = 'session';
+	
+	// 显示到页面
+	render(key);
+	
+	document.form1.onsubmit = function() {
+		var txt = this.session_ta.value;
+		add(key, txt);
+		render(key);
+		
+		return false;
+	}
+</script>
+
+<h4>localStorage：留言板</h4>
+<div id="local_div"></div>
+<form name="form2">
+	<textarea name="local_ta"></textarea>
+	<input type="submit" />
+</form>
+<script type="text/javascript">
+	function renderL(key) {
+		var data = localStorage.getItem(key),
+		div = document.getElementById('local_div');
+		
+		div.innerHTML = data;
+	}
+	
+	function addL(key, txt) {
+		// getItem：没有key对应的数据时返回null
+		var data = localStorage.getItem(key) || '';
+		localStorage.setItem(key, data + txt + '<br />');
+	}
+	
+	var keyL = 'local';
+	
+	// 显示到页面
+	renderL(keyL);
+	
+	document.form2.onsubmit = function() {
+		var txt = this.local_ta.value;
+		addL(keyL, txt);
+		renderL(keyL);
+		
+		return false;
+	}
+</script>
+</body>
+</html>
