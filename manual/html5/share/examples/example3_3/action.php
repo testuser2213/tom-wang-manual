@@ -6,10 +6,8 @@
 </head>
 <body>
 <?php
-var_dump($_POST);
+var_dump($_FILES);
 ?>
-<br />
-这是action1.php
 <br />
 <a href="index.html">返回</a>
 </body>

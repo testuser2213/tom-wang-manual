@@ -14,5 +14,12 @@
 </form>
 <input type="text" name="name1" value="text1" form="form1" />
 <input type="text" name="name2" value="text2" form="form2" />
+
+<h4>formaction：通过提交按钮指定，formtarget、formmethod等等属性类似</h4>
+<form action="action1.php" method="post">
+	<input type="text" name="name1" value="text1" />
+	<input type="submit" value="提交到action1.php" formaction="action1.php" />
+	<input type="submit" value="提交到action2.php" formaction="action2.php" />
+</form>
 </body>
 </html>
