@@ -9,7 +9,7 @@
 var_dump($_POST);
 ?>
 <br />
-这是action1.php
+这是action2.php
 <br />
 <a href="index.html">返回</a>
 </body>

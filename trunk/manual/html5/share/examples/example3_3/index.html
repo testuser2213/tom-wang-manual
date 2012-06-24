@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>FileList、File：同时上传多个文件</h4>
+<form name="form1" enctype="multipart/form-data" method="post" action="action.php">
+	<input type="file" name="file1[]" multiple />
+	<input type="submit" />
+</form>
+<script type="text/javascript">
+document.form1.onsubmit = function() {
+	// 同时上传多个文件，将file元素的name属性设置为数组形式，如xxx[]
+	var files = this['file1[]'].files, //返回FileList对象
+		file,
+		len = files.length,
+		index = 0,
+		desc = '选择的文件：\n';
+	
+	for(; index < len; ++index) {
+		// 读取File对象
+		file = files.item(index);
+		// size和type属性继承自Blob
+		desc += '（' + (index + 1) + '）、文件名：' + file.name + '，最后修改时间：' + file.lastModifiedDate + '，大小：' + file.size + '字节，类型：' + file.type + '\n';
+	}
+	
+	alert(desc);
+	
+	//return false;
+}
+</script>
+
+<h4>FileReader：异步访问文件系统（图片预览效果）</h4>
+<form name="form2">
+	<input type="file" name="file2" />
+	<input type="submit" />
+</form>
+<img id="filereader_img1" src="about:blank" width="100px" height="100px" />
+<script type="text/javascript">
+	document.form2.file2.onchange = function() {
+		var file = this.files.item(0),
+			reader = new FileReader();
+			
+		reader.readAsDataURL(file); // 触发异步事件
+		
+		// 请参考说明文档，查看各事件状态
+		reader.onload = function() {
+			// 数据保存在result属性中
+			document.getElementById('filereader_img1').src = this.result;
+		}
+	}
+</script>
+</body>
+</html>

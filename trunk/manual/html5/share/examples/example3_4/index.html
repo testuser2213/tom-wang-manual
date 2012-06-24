@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>拖放API：类似qq邮箱的文件拖放</h4>
+<div id="to" style="width:200px; height:100px; background:red;"></div>
+<script type="text/javascript">	
+	var to = document.getElementById('to');
+	
+	to.ondrop = function(e) {
+		var dt = e.dataTransfer,
+			files = dt.files, //返回FileList对象
+			file,
+			len = files.length,
+			index = 0,
+			desc = '选择的文件：\n';
+		
+		for(; index < len; ++index) {
+			// 读取File对象
+			file = files.item(index);
+			// size和type属性继承自Blob
+			desc += '（' + (index + 1) + '）、文件名：' + file.name + '，最后修改时间：' + file.lastModifiedDate + '，大小：' + file.size + '字节，类型：' + file.type + '\n';
+		}
+		
+		alert(desc);
+		
+		e.stopPropagation();
+		e.preventDefault();
+	}
+	
+	to.ondragover = to.ondropenter = function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+	}
+</script>
+</body>
+</html>
