@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# 开头必须是CACHE MANIFEST
+# 版本号，可选
+#version 4
+
+
+# CACHE节点表示需要缓存到本地的文件列表
+CACHE:
+style1.css
+
+# NETWORK节点指定需要从网络下载的文件列表
+NETWORK:
+style2.css
+
+# FALLBACK每行指定两个资源文件，第一个资源文件是能够在线访问时使用的资源文件，第二个是不能在线访问时使用的备用资源文件
+#FALLBACK:
+#online.js offline.js
+# 可以指定“*”通配符，表示没有在本manifest文件中指定的资源文件都不进行本地缓存
+#*
+
+# 节点可以分好几段指定
+#CACHE:
+#hello.js

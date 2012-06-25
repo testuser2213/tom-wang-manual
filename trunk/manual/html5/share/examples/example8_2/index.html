@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>本地数据库：留言板</h4>
+<div id="session_div">
+</div>
+<form name="form1">
+	<textarea name="session_ta"></textarea>
+	<input type="submit" />
+</form>
+<script type="text/javascript">
+// 创建一个Socket实例
+var socket = new WebSocket('ws://www.example.com'); 
+
+// 打开Socket 
+socket.onopen = function(event) { 
+	// 发送一个初始化消息
+	socket.send('I am the client and I\'m listening!');
+	
+	// 监听消息
+	socket.onmessage = function(event) { 
+		console.log('Client received a message',event); 
+	}; 
+	
+	// 监听Socket的关闭
+	socket.onclose = function(event) { 
+		console.log('Client notified socket has closed',event); 
+	}; 
+	
+	// 关闭Socket.... 
+	//socket.close() 
+};
+</script>
+</body>
+</html>
