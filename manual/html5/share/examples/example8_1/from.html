@@ -17,7 +17,7 @@
 <br />
 <br />
 <br />
-<iframe src="to.html"></iframe>
+<iframe src="http://www.tom.com/manual/html5/share/examples/example8_1/to.html"></iframe>
 <script type="text/javascript">
 	window.onmessage = function(e) {
 		// 可以对origin做限制，过滤非法来源
@@ -34,7 +34,7 @@
 	document.form1.onsubmit = function() {
 		var txt = this.ta.value,
 			// 如果iframe不在这个origin下，则不发送消息
-			to = 'http://localhost/',
+			to = 'http://www.tom.com/',
 			content = document.getElementById('content'),
 			html = content.innerHTML;
 		
