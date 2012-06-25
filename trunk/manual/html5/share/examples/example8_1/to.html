@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>跨文档消息传输：接收者</h4>
+<div id="content"></div>
+<form name="form1">
+	<textarea name="ta"></textarea>
+	<input type="submit" />
+</form>
+<script type="text/javascript">
+	window.onmessage = function(e) {
+		// 可以对origin做限制，过滤非法来源
+		// 使用source回发信息
+		var origin = e.origin,
+			data = e.data,
+			source = e.source,
+			content = document.getElementById('content'),
+			html = content.innerHTML;
+			
+		content.innerHTML = html + 'A：' + data + '<br />';
+	}
+	
+	document.form1.onsubmit = function() {
+		var txt = this.ta.value,
+			to = 'http://localhost/',
+			content = document.getElementById('content'),
+			html = content.innerHTML;
+			
+		content.innerHTML = html + '我：' + txt + '<br />';
+		
+		// 注意是调用其他窗口的postMessage方法
+		window.parent.postMessage(txt, to);
+		
+		return false;
+	}
+</script>
+</body>
+</html>
