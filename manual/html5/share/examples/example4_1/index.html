@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>Canvas</h4>
+<a href="#" id="a1">另存为</a><br />
+<canvas id="canvas" width="150px" height="150px"></canvas>
+<script type="text/javascript">
+	// 1.取得canvas
+	var canvas = document.getElementById('canvas'),
+	
+	// 2.取得上下文
+	context = canvas.getContext('2d');
+		
+	// 3.设定样式，指定线宽
+	context.fillStyle = 'rgb(255, 0, 0)';
+	context.strokeStyle = 'rgb(0, 255, 0)';
+	context.lineWidth = 5;
+	
+	// 4.勾勒路径
+	context.beginPath();	
+	context.moveTo(10, 10);
+	context.lineTo(100, 100);
+	context.lineTo(100, 10);
+	context.closePath();
+	
+	// 5.绘制/描边
+	context.fill();
+	context.stroke();
+	
+	var a = document.getElementById('a1');
+	a.onclick = function(e) {
+		location.href = canvas.toDataURL('image/png');
+	}
+</script>
+</body>
+</html>
