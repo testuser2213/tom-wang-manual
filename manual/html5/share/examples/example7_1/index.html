@@ -8,7 +8,39 @@
 </head>
 <body>
 <h4>离线应用程序</h4>
+<a href="#" id="a1">检查更新</a>&nbsp;&nbsp;<span id="span1"></span>
 <div class="div1">我是div1</div>
 <div class="div2">我是div2</div>
+
+<script type="text/javascript">
+	var a = document.getElementById('a1'),
+		span = document.getElementById('span1');
+	
+	a.onclick = function(e) {
+		// 检查manifest是否有更新
+		applicationCache.update();
+		return false;
+	}
+	
+	applicationCache.onupdateready = function(e) {
+		span.innerHTML = '<a href="#" onclick="update(); return false;">检查到更新，点击应用更新</a>';
+	}
+	
+	applicationCache.onnoupdate = function(e) {
+		span.innerHTML = '当前应用程序已经是最新';
+	}
+	
+	applicationCache.onchecking = function(e) {
+		span.innerHTML = '正在检查更新...';
+	}
+	
+	applicationCache.oncached = function(e) {
+		span.innerHTML = '首次缓存成功';
+	}
+	
+	function update() {
+		location.reload();
+	}
+</script>
 </body>
 </html>
