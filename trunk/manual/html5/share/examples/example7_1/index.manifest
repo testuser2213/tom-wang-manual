@@ -1,8 +1,7 @@
 CACHE MANIFEST
 # 开头必须是CACHE MANIFEST
 # 版本号，可选
-#version 4
-
+#version 5
 
 # CACHE节点表示需要缓存到本地的文件列表
 CACHE:
