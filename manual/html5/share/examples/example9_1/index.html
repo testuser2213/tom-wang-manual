@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>初识HTML5</title>
+</head>
+<body>
+<h4>Web Workers</h4>
+<form name="form1">
+	<textarea name="ta"></textarea>
+	<input type="submit" />
+</form>
+
+<script type="text/javascript">
+// 构造函数：接受脚本路径作为参数
+var worker1 = new Worker('worker1.js');
+
+worker1.onmessage = function(e) {
+	var data = e.data;
+	alert('收到后方的反馈：' + data);
+}
+
+document.form1.onsubmit = function(e) {
+	var msg = this.ta.value;
+	
+	// 调用worker的postMessage向线程发送消息
+	worker1.postMessage(msg);
+	
+	return false;
+}
+</script>
+</body>
+</html>
