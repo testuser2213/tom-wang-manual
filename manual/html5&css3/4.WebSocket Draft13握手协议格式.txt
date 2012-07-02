@@ -1,0 +1,30 @@
+WebSockets握手请求
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: echo.websocket.org
+Origin: http://www.example.com
+Sec-WebSocket-Key: +G1gRHHwVPgop5qxEk327w==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+Cookie: __utma=9925811.1194169625.1341125996.1341129697.1341145067.3; __utmc=9925811; __utmz=9925811.1341125996.1.1.utmcsr=websocket.org|utmccn=(referral)|utmcmd=referral|utmcct=/
+
+
+==========================================================================================================
+WebSockets握手响应
+HTTP/1.1 101 Web Socket Protocol Handshake
+Upgrade: WebSocket
+Connection: Upgrade
+Sec-WebSocket-Accept: //1L3KKh7izH9yxk6eHlIRdXeK0=
+Server: Kaazing Gateway
+Date: Sun, 01 Jul 2012 14:16:40 GMT
+Access-Control-Allow-Origin: http://www.example.com
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: content-type
+Access-Control-Allow-Headers: authorization
+Access-Control-Allow-Headers: x-websocket-extensions
+Access-Control-Allow-Headers: x-websocket-version
+Access-Control-Allow-Headers: x-websocket-protocol
+
+
+=========================================================================================================
