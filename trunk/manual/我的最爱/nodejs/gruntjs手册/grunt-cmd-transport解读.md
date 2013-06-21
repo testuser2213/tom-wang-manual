@@ -7,6 +7,7 @@ By Tom.Wang<tom.wang.sz@qq.com\>
 ## 可用配置项 ##
 1、paths：数组，默认值['sea-modules']  
 用于指定seajs模块的位置  
+在transport中只是做检测提示用，看依赖模块是否存在  
 
 2、idleading：字符串，默认值""  
 转换后的模块ID的前缀  
