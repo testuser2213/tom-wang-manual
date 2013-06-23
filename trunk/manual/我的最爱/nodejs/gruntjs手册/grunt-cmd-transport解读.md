@@ -20,11 +20,19 @@ By Tom.Wang<tom.wang.sz@qq.com\>
 
 5、handlebars：对象  
 配置handlebars compiler的选项  
+默认值：
+<pre>
+      handlebars: {
+        id: 'gallery/handlebars/1.0.2/runtime',
+        knownHelpers: [],
+        knownHelpersOnly: false
+      }
+</pre>
 
-6、uglify：对象  
+6、uglify：对象，默认值：uglify: {beautify: true, comments: true}    
 uglify的配置，建议不用配置  
 
-7、parsers：  
+7、parsers：对象  
 对指定的文件类型使用特定的parser进行转换（高级用法）
 <pre>
 options: {
@@ -32,7 +40,17 @@ options: {
         '.coffee': [coffeeParser]
     }
 }
+默认值：
+parsers: {
+	'.js': [script.jsParser],
+	'.css': [style.cssParser],
+	'.html': [text.html2jsParser],
+	'.tpl': [template.tplParser],
+	'.handlebars': [template.handlebarsParser]
+}
 </pre>
+8、process：布尔值，默认false  
+是否处理模板
 
 ## ChangeLog ##
 2013年06月18日 新建文档，基于v0.2.6
