@@ -97,14 +97,58 @@ main.js载入a.js，a.js接着载入b.js，这时b.js又尝试载入a.js，为�
 ## module.children ##
 1、返回该模块加载的子模块数组  
 
+## Module加载伪代码 ##
+<pre>
+require(X) from module at path Y
+1. If X is a core module,
+   a. return the core module
+   b. STOP
+2. If X begins with './' or '/' or '../'
+   a. LOAD_AS_FILE(Y + X)
+   b. LOAD_AS_DIRECTORY(Y + X)
+3. LOAD_NODE_MODULES(X, dirname(Y))
+4. THROW "not found"
+
+LOAD_AS_FILE(X)
+1. If X is a file, load X as JavaScript text.  STOP
+2. If X.js is a file, load X.js as JavaScript text.  STOP
+3. If X.node is a file, load X.node as binary addon.  STOP
+
+LOAD_AS_DIRECTORY(X)
+1. If X/package.json is a file,
+   a. Parse X/package.json, and look for "main" field.
+   b. let M = X + (json main field)
+   c. LOAD_AS_FILE(M)
+2. If X/index.js is a file, load X/index.js as JavaScript text.  STOP
+3. If X/index.node is a file, load X/index.node as binary addon.  STOP
+
+LOAD_NODE_MODULES(X, START)
+1. let DIRS=NODE_MODULES_PATHS(START)
+2. for each DIR in DIRS:
+   a. LOAD_AS_FILE(DIR/X)
+   b. LOAD_AS_DIRECTORY(DIR/X)
+
+NODE_MODULES_PATHS(START)
+1. let PARTS = path split(START)
+2. let ROOT = index of first instance of "node_modules" in PARTS, or 0
+3. let I = count of PARTS - 1
+4. let DIRS = []
+5. while I > ROOT,
+   a. if PARTS[I] = "node_modules" CONTINUE
+   c. DIR = path join(PARTS[0 .. I] + "node_modules")
+   b. DIRS = DIRS + DIR
+   c. let I = I - 1
+6. return DIRS
+</pre>
+
 ## 从Global目录中载入模块 ##
-1、如果在其他地方都找不到模块，则在`NODE_PATH`环境变量中查找模块，Linux中的`NODE_PATH`以“:”分隔，Windows中以“;”分隔  
+1、如果按以上规则都找不到模块，则在`NODE_PATH`环境变量中查找模块，Linux中的`NODE_PATH`以“:”分隔，Windows中以“;”分隔  
 2、同时，node也会在以下路径查找模块  
 > 1: $HOME/.node_modules  
 > 2: $HOME/.node_libraries  
 > 3: $PREFIX/lib/node
 
-3、由于历史原因，这些特性还保留着。最好将依赖的包或库放在node_modules目录下，这下加载更快，鼓励这么做  
+3、由于历史原因，这些特性还保留着。最好将依赖的包或库放在node_modules目录下，这样加载更快，鼓励这么做  
 
 ## 访问主模块 ##
 1、如果文件直接用node调用，那么`require.main`设置为这个文件的module，可以如下判断一个文件是否通过node直接调用  
@@ -115,3 +159,4 @@ main.js载入a.js，a.js接着载入b.js，这时b.js又尝试载入a.js，为�
 
 ## ChangeLog ##
 2013年06月14日 新建文档，基于v0.10.11  
+2013年06月18日 添加“Module加载伪代码”
