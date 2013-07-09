@@ -87,6 +87,8 @@ By Tom.Wang<tom.wang.sz@qq.com\>
 ## bundledDependencies ##
 
 ## optionalDependencies ##
+1、逻辑同devDependencies  
+2、这里的包如果没有或没有合适的版本，整个程序不会报错而终止  
 
 ## engines ##
 1、指定程序依赖的node版本  
