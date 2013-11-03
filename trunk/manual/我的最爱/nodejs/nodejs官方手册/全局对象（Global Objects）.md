@@ -43,7 +43,7 @@ By Tom.Wang<tom.wang.sz@qq.com\>
 
 ## setTimeout(cb, ms) ##
 1、在至少ms毫秒后执行cb，真实间隔跟系统的定时系统和负载有关  
-2、ms最少不能超过24.8天  
+2、ms最多不能超过24.8天  
 3、返回一个代表计时器的对象  
 
 ## clearTimeout(timer) ##
